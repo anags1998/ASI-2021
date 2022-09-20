@@ -1,0 +1,336 @@
+1622118890: COMMAND <cp ./examen4 /tmp/.examen4>
+ALARM: Programa usado por 45916038B, anteriormente usado (2 veces) por 78997168B
+1622118890: COMMAND <cp -f /tmp/.examen4 ./examen4>
+1622118890: COMMAND <uname -a >> .trazas-4/alumno-45916038B>
+Linux ana-VirtualBox 4.15.0-142-generic #146-Ubuntu SMP Tue Apr 13 01:11:19 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+1622118890: COMMAND <ifconfig 2>&1 >> .trazas-4/alumno-45916038B>
+1622118890: COMMAND <echo -n 'MACHINE-ID: ' >> .trazas-4/alumno-45916038B>
+MACHINE-ID: 1622118890: COMMAND <cat /etc/machine-id >> .trazas-4/alumno-45916038B>
+3ee4344e935d4984ab86063ac6ab8a46
+1622118890: 
+La máquina está ya identificada.
+1622118890: RX: <OK Accepted>
+1622118894: TX: <CHECKPWD KsM3vNMX+1tHFC>
+1622118894: RX: <NEW>
+1622118894: 
+***************************************************
+El usuario no tiene un password público registrado.
+Por favor, confirme el password para darlo de alta.
+[5mEl password debe recordarlo para futuras sesiones.[0m
+Utilice una secuencia de caracteres personal privados.
+En el servidor se guardará una versión encriptada.
+Si no está de acuerdo con el password que ha utilizado
+interrumpa el proceso y comience de nuevo el registro.
+Posteriormente será más complicado modificarlo. Tendrá.
+que ponerse en contacto con el administrador:
+                 armando.ferro@ehu.eus
+***************************************************
+1622118898: TX: <CREATEPWD KsM3vNMX+1tHFC>
+1622118898: [5m
+LOGIN: Registrado password público <KsM3vNMX+1tHFC>.[0m
+1622118898: RX: <DONE>
+1622118898: 
+********************************************
+           INICIANDO SESION
+********************************************
+1622118898: TX: <UUID 57206189-a595-4315-a2ca-430aed4a8e9a>
+1622118898: RX: <REGISTERED>
+1622118898: COMMAND <find . -type f -newer .signature -print | awk -v pwd="`pwd`/.trazas-4" '{ if(index($0,pwd) != 1) print }' > /tmp/.asitmp>
+1622118898: COMMAND <cp ./client.? .trazas-4>
+1622118899: COMMAND <tar zcf save_file-45916038B .trazas-4 > /dev/null>
+1622118899: COMMAND <echo "\nopen u017633.ehu.es\nuser anonymous anonymous\npassive\ncd LAB2021/examen-4\nput save_file-45916038B 45916038B-27-5-14h34\n" | 	  ftp -n 2>&1 > /dev/null>
+1622118899: COMMAND <ipcs -m >> .trazas-4/alumno-45916038B 2>&1>
+
+---- Segmentos memoria compartida ----
+key        shmid      propietario perms      bytes      nattch     estado      
+0x00000000 196608     ana        600        524288     2          dest         
+0x00000000 786433     ana        600        524288     2          dest         
+0x00000000 393218     ana        600        67108864   2          dest         
+0x00000000 524291     ana        600        16777216   2          dest         
+0x00000000 622596     ana        600        524288     2          dest         
+0x00000000 655365     ana        600        524288     2          dest         
+0x00000000 819206     ana        600        524288     2          dest         
+
+1622118909: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 1.
+
+*************************************************
+
+
+1622118909: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-4/.n_cliente>
+1622118909: 
+-------------------------------------------------------
+==> Intentando conectar en 127.0.0.1:3010
+1622118909: 
+-------------------------------------------------------
+Temporización para la comunicación agotado.
+
+-------------------------------------------------------
+1622118910: 
+-------------------------------------------------------
+==> Intentando conectar en 127.0.0.1:3010
+1622118910: ==> Conexión (6) correcta en  127.0.0.1:3010
+-------------------------------------------------------
+1622118910: 
+-------------------------------------------------------
+==> Esperando 3 segundos a recibir mensaje.
+
+-------------------------------------------------------
+1622118913: 
+------------------------------------------
+AGOTADA temporización de recepción de datos.
+------------------------------------------
+1622118913: 
+-------------------------------------------------------
+Recibida una respuesta no adecuada.
+
+-------------------------------------------------------
+1622118913: Cerrando socket (6)  con 127.0.0.1 por el MONITOR
+1622118913: Cerrando socket (5)  con 127.0.0.1 por el MONITOR
+1622118913: 
+[5m*************************************************
+:nok> No se ha realizado correctamente el ejercicio 1.
+
+*************************************************[0m
+1622118913: COMMAND <who >> .trazas-4/alumno-45916038B>
+ana      :0           2021-05-27 14:22 (:0)
+1622119053: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 1.
+
+*************************************************
+
+
+1622119053: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-4/.n_cliente>
+1622119053: 
+-------------------------------------------------------
+==> Intentando conectar en 127.0.0.1:3010
+1622119053: ==> Conexión (5) correcta en  127.0.0.1:3010
+-------------------------------------------------------
+1622119053: 
+-------------------------------------------------------
+==> Esperando 3 segundos a recibir mensaje.
+
+-------------------------------------------------------
+1622119056: 
+------------------------------------------
+AGOTADA temporización de recepción de datos.
+------------------------------------------
+1622119056: 
+-------------------------------------------------------
+Recibida una respuesta no adecuada.
+
+-------------------------------------------------------
+1622119056: Cerrando socket (5)  con 127.0.0.1 por el MONITOR
+1622119057: 
+-------------------------------------------------------
+==> Intentando conectar en 127.0.0.1:3010
+1622119057: ==> Conexión (5) correcta en  127.0.0.1:3010
+-------------------------------------------------------
+1622119057: 
+-------------------------------------------------------
+==> Esperando 3 segundos a recibir mensaje.
+
+-------------------------------------------------------
+1622119060: 
+------------------------------------------
+AGOTADA temporización de recepción de datos.
+------------------------------------------
+1622119060: 
+-------------------------------------------------------
+Recibida una respuesta no adecuada.
+
+-------------------------------------------------------
+1622119060: Cerrando socket (5)  con 127.0.0.1 por el MONITOR
+1622119060: 
+[5m*************************************************
+:nok> No se ha realizado correctamente el ejercicio 1.
+
+*************************************************[0m
+1622119060: COMMAND <who >> .trazas-4/alumno-45916038B>
+ana      :0           2021-05-27 14:22 (:0)
+1622119544: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 1.
+
+*************************************************
+
+
+1622119544: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-4/.n_cliente>
+1622119544: 
+-------------------------------------------------------
+==> Intentando conectar en 127.0.0.1:3010
+1622119544: ==> Conexión (5) correcta en  127.0.0.1:3010
+-------------------------------------------------------
+1622119544: 
+-------------------------------------------------------
+==> Esperando 3 segundos a recibir mensaje.
+
+-------------------------------------------------------
+1622119547: 
+------------------------------------------
+AGOTADA temporización de recepción de datos.
+------------------------------------------
+1622119547: 
+-------------------------------------------------------
+Recibida una respuesta no adecuada.
+
+-------------------------------------------------------
+1622119547: Cerrando socket (5)  con 127.0.0.1 por el MONITOR
+1622119548: 
+-------------------------------------------------------
+==> Intentando conectar en 127.0.0.1:3010
+1622119548: ==> Conexión (5) correcta en  127.0.0.1:3010
+-------------------------------------------------------
+1622119548: 
+-------------------------------------------------------
+==> Esperando 3 segundos a recibir mensaje.
+
+-------------------------------------------------------
+1622119551: 
+------------------------------------------
+AGOTADA temporización de recepción de datos.
+------------------------------------------
+1622119551: 
+-------------------------------------------------------
+Recibida una respuesta no adecuada.
+
+-------------------------------------------------------
+1622119551: Cerrando socket (5)  con 127.0.0.1 por el MONITOR
+1622119551: 
+[5m*************************************************
+:nok> No se ha realizado correctamente el ejercicio 1.
+
+*************************************************[0m
+1622119551: COMMAND <who >> .trazas-4/alumno-45916038B>
+ana      :0           2021-05-27 14:22 (:0)
+1622119778: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 1.
+
+*************************************************
+
+
+1622119778: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-4/.n_cliente>
+1622119779: 
+-------------------------------------------------------
+==> Intentando conectar en 127.0.0.1:3010
+1622119779: ==> Conexión (5) correcta en  127.0.0.1:3010
+-------------------------------------------------------
+1622119779: 
+-------------------------------------------------------
+==> Esperando 3 segundos a recibir mensaje.
+
+-------------------------------------------------------
+1622119782: 
+------------------------------------------
+AGOTADA temporización de recepción de datos.
+------------------------------------------
+1622119782: 
+-------------------------------------------------------
+Recibida una respuesta no adecuada.
+
+-------------------------------------------------------
+1622119782: Cerrando socket (5)  con 127.0.0.1 por el MONITOR
+1622119783: 
+-------------------------------------------------------
+==> Intentando conectar en 127.0.0.1:3010
+1622119783: ==> Conexión (5) correcta en  127.0.0.1:3010
+-------------------------------------------------------
+1622119783: 
+-------------------------------------------------------
+==> Esperando 3 segundos a recibir mensaje.
+
+-------------------------------------------------------
+1622119786: 
+------------------------------------------
+AGOTADA temporización de recepción de datos.
+------------------------------------------
+1622119786: 
+-------------------------------------------------------
+Recibida una respuesta no adecuada.
+
+-------------------------------------------------------
+1622119786: Cerrando socket (5)  con 127.0.0.1 por el MONITOR
+1622119786: 
+[5m*************************************************
+:nok> No se ha realizado correctamente el ejercicio 1.
+
+*************************************************[0m
+1622119786: COMMAND <who >> .trazas-4/alumno-45916038B>
+ana      :0           2021-05-27 14:22 (:0)
+1622120094: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 1.
+
+*************************************************
+
+
+1622120094: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-4/.n_cliente>
+1622120095: 
+-------------------------------------------------------
+==> Intentando conectar en 127.0.0.1:3010
+1622120095: ==> Conexión (5) correcta en  127.0.0.1:3010
+-------------------------------------------------------
+1622120095: 
+-------------------------------------------------------
+==> Esperando 3 segundos a recibir mensaje.
+
+-------------------------------------------------------
+1622120098: 
+------------------------------------------
+AGOTADA temporización de recepción de datos.
+------------------------------------------
+1622120098: 
+-------------------------------------------------------
+Recibida una respuesta no adecuada.
+
+-------------------------------------------------------
+1622120098: Cerrando socket (5)  con 127.0.0.1 por el MONITOR
+1622120099: 
+-------------------------------------------------------
+==> Intentando conectar en 127.0.0.1:3010
+1622120099: ==> Conexión (5) correcta en  127.0.0.1:3010
+-------------------------------------------------------
+1622120099: 
+-------------------------------------------------------
+==> Esperando 3 segundos a recibir mensaje.
+
+-------------------------------------------------------
+1622120102: 
+------------------------------------------
+AGOTADA temporización de recepción de datos.
+------------------------------------------
+1622120102: 
+-------------------------------------------------------
+Recibida una respuesta no adecuada.
+
+-------------------------------------------------------
+1622120102: Cerrando socket (5)  con 127.0.0.1 por el MONITOR
+1622120102: 
+[5m*************************************************
+:nok> No se ha realizado correctamente el ejercicio 1.
+
+*************************************************[0m
+1622120102: COMMAND <who >> .trazas-4/alumno-45916038B>
+ana      :0           2021-05-27 14:22 (:0)
+1622120853: COMMAND <find . -type f -newer .signature -print | awk -v pwd="`pwd`/.trazas-4" '{ if(index($0,pwd) != 1) print }' > /tmp/.asitmp>
+1622120858: COMMAND <cp ./client.? .trazas-4>
+1622120859: COMMAND <tar zcf save_file-45916038B .trazas-4 > /dev/null>
+1622120862: COMMAND <echo "\nopen u017633.ehu.es\nuser anonymous anonymous\npassive\ncd LAB2021/examen-4\nput save_file-45916038B 45916038B-27-5-14h34\n" | 	  ftp -n 2>&1 > /dev/null>

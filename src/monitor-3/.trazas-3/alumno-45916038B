@@ -1,0 +1,1271 @@
+1618761999: COMMAND <cp ./monitor3 /tmp/.monitor3>
+1618762002: COMMAND <cp -f /tmp/.monitor3 ./monitor3>
+1618762002: COMMAND <uname -a >> .trazas-3/alumno-45916038B>
+Linux ana-VirtualBox 4.15.0-20-generic #21-Ubuntu SMP Tue Apr 24 06:16:15 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux
+1618762004: COMMAND <ifconfig 2>&1 >> .trazas-3/alumno-45916038B>
+1618762004: COMMAND <echo -n 'MACHINE-ID: ' >> .trazas-3/alumno-45916038B>
+MACHINE-ID: 1618762004: COMMAND <cat /etc/machine-id >> .trazas-3/alumno-45916038B>
+3ee4344e935d4984ab86063ac6ab8a46
+1618762006: 
+La máquina está ya identificada.
+1618762006: RX: <OK Accepted>
+1618762006: TX: <CHECKPWD GpfgwNs6a1VOFC>
+1618762006: RX: <NEW>
+1618762006: 
+***************************************************
+El usuario no tiene un password público registrado.
+Por favor, confirme el password para darlo de alta.
+[5mEl password debe recordarlo para futuras sesiones.[0m
+Utilice una secuencia de caracteres personal privados.
+En el servidor se guardará una versión encriptada.
+Si no está de acuerdo con el password que ha utilizado
+interrumpa el proceso y comience de nuevo el registro.
+Posteriormente será más complicado modificarlo. Tendrá.
+que ponerse en contacto con el administrador:
+                 armando.ferro@ehu.eus
+***************************************************
+1618762023: 
+ALERT!! Fallo en la identificación del usuario <KsM3vNMX+1tHFC>.
+1618762026: TX: <CREATEPWD GpfgwNs6a1VOFC>
+1618762026: [5m
+LOGIN: Registrado password público <GpfgwNs6a1VOFC>.[0m
+1618762026: RX: <DONE>
+1618762026: 
+********************************************
+           INICIANDO SESION
+********************************************
+1618762026: TX: <UUID 57206189-a595-4315-a2ca-430aed4a8e9a>
+1618762026: RX: <REGISTERED>
+1618762026: COMMAND <find . -type f -newer .signature -print | awk -v pwd="`pwd`/.trazas-3" '{ if(index($0,pwd) != 1) print }' > /tmp/.asitmp>
+1618762027: COMMAND <cp ./client.? .trazas-3>
+1618762027: COMMAND <tar zcf save_file-45916038B .trazas-3 > /dev/null>
+1618762027: COMMAND <echo "\nopen u017633.ehu.es\nuser anonymous anonymous\npassive\ncd LAB2021/practica-3\nput save_file-45916038B 45916038B-18-4-18h06\n" | 	  ftp -n 2>&1 > /dev/null>
+1618762159: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 1.
+
+*************************************************
+
+
+1618762159: COMMAND <ipcs -m >> .trazas-3/alumno-45916038B 2>&1>
+
+---- Segmentos memoria compartida ----
+key        shmid      propietario perms      bytes      nattch     estado      
+0x00000000 262144     ana        600        67108864   2          dest         
+0x00000000 360449     ana        600        524288     2          dest         
+0x00000000 491523     ana        600        16777216   2          dest         
+0x00000000 589830     ana        600        524288     2          dest         
+0x00000000 851975     ana        600        4956160    2          dest         
+0x00000000 819208     ana        600        4956160    2          dest         
+0x00000000 884745     ana        600        8192       2          dest         
+0x00000000 917514     ana        600        8192       2          dest         
+0x00000000 1835019    ana        600        524288     2          dest         
+0x00000000 1638412    ana        600        1093632    2          dest         
+0x00000000 1474573    ana        600        49152      2          dest         
+0x00000000 1507342    ana        600        49152      2          dest         
+0x00000000 1605647    ana        600        1093632    2          dest         
+
+1618762160: 
+[5m********************************************
+:ok> Ejercicio 1 bien realizado pendiente de obtener resultados.
+********************************************[0m
+1618762160: 
+--------------------------------------------------------------------------------------
+Esperando 15 segundos a que se enganche a la memoria compartida <0x45916038> el proceso <client>.
+--------------------------------------------------------------------------------------
+1618762172: 
+--------------------------------------------------------------------------------------------------
+ENGANCHADO. Esperando 5 segundos a que se DESenganche de la memoria compartida <0x45916038> el proceso <client>.
+--------------------------------------------------------------------------------------------------
+1618762175: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <3> es <393>.
+********************************************[0m
+1618762178: 
+*************************************************
+:ok> CONTEXTO del ejercicio 1 preparado.
+*************************************************
+1618762178: COMMAND <ipcrm -M 0x45916038 > /dev/null 2>&1>
+1618762178: COMMAND <who >> .trazas-3/alumno-45916038B>
+ana      :0           2021-04-18 17:54 (:0)
+1618762182: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 2.
+
+*************************************************
+
+
+1618762182: COMMAND <ipcrm -M 0x45916038 > /dev/null 2>&1>
+1618762182: 
+----------------------------------------------------------------------------------
+ Esperando 10 segundos a la creación de la memoria compartida <0x45916038> por el proceso <client>.
+----------------------------------------------------------------------------------
+1618762183: 
+--------------------------------------------------------------------------------------
+Esperando 15 segundos a que se enganche a la memoria compartida <0x45916038> el proceso <client>.
+--------------------------------------------------------------------------------------
+1618762183: 
+--------------------------------------------------------------------------------------------------
+ENGANCHADO. Esperando 5 segundos a que se DESenganche de la memoria compartida <0x45916038> el proceso <client>.
+--------------------------------------------------------------------------------------------------
+1618762185: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <4> es <610>.
+********************************************[0m
+1618762185: 
+*******************************************************
+ Comprobar condiciones de cumplimiento de la clave <2>.
+*******************************************************
+1618762185: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <2> es <284>.
+********************************************[0m
+1618762185: 
+*******************************************************
+ Comprobar condiciones de cumplimiento de la clave <5>.
+*******************************************************
+1618762185: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <5> es <463>.
+********************************************[0m
+1618762185: 
+*******************************************************
+ Comprobar condiciones de cumplimiento de la clave <1>.
+*******************************************************
+1618762185: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <1> es <915>.
+********************************************[0m
+1618762188: 
+*************************************************
+:ok> CONTEXTO del ejercicio 2 preparado.
+*************************************************
+1618762188: COMMAND <ipcrm -M 0x45916038 > /dev/null 2>&1>
+1618762188: COMMAND <who >> .trazas-3/alumno-45916038B>
+ana      :0           2021-04-18 17:54 (:0)
+1618762194: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 3.
+
+*************************************************
+
+
+1618762194: COMMAND <ipcrm -S 0x45916038 > /dev/null 2>&1>
+1618762194: 
+-----------------------------------------------------------------------------------
+ Esperando 10 segundos a la creación del semáforo <0x45916038> por el proceso <client>.
+-----------------------------------------------------------------------------------
+1618762205: 
+-------------------------------------------------------
+RESPUESTA NO RECIBIDA A TIEMPO.
+-------------------------------------------------------
+1618762205: 
+[5m*************************************************
+:NOK> Intento fallido para conseguir la clave <6> .
+
+*************************************************[0m
+1618762205: 
+[5m*************************************************
+:nok> No se ha realizado correctamente el ejercicio 3.
+
+*************************************************[0m
+1618762205: COMMAND <ipcrm -S 0x45916038 > /dev/null 2>&1>
+1618762205: COMMAND <who >> .trazas-3/alumno-45916038B>
+ana      :0           2021-04-18 17:54 (:0)
+1618762214: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 4.
+
+*************************************************
+
+
+1618762214: COMMAND <ipcrm -S 0x45916038 > /dev/null 2>&1>
+1618762214: 
+-----------------------------------------------------------------------------------
+ Esperando 10 segundos a la creación del semáforo <0x45916038> por el proceso <client>.
+-----------------------------------------------------------------------------------
+1618762215: 
+*******************************************************
+ Comprobar condiciones de cumplimiento de la clave <7>.
+*******************************************************
+1618762215: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <7> es <597>.
+********************************************[0m
+1618762218: 
+*************************************************
+:ok> CONTEXTO del ejercicio 4 preparado.
+*************************************************
+1618762218: COMMAND <ipcrm -S 0x45916038 > /dev/null 2>&1>
+1618762218: COMMAND <who >> .trazas-3/alumno-45916038B>
+ana      :0           2021-04-18 17:54 (:0)
+1618762222: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 5.
+
+*************************************************
+
+
+1618762222: COMMAND <ipcrm -S 0x45916038 > /dev/null 2>&1>
+1618762222: COMMAND <ipcs -m >> .trazas-3/alumno-45916038B 2>&1>
+
+---- Segmentos memoria compartida ----
+key        shmid      propietario perms      bytes      nattch     estado      
+0x00000000 262144     ana        600        67108864   2          dest         
+0x00000000 360449     ana        600        524288     2          dest         
+0x00000000 491523     ana        600        16777216   2          dest         
+0x00000000 1900548    ana        600        524288     2          dest         
+0x00000000 1933317    ana        600        524288     2          dest         
+0x00000000 589830     ana        600        524288     2          dest         
+0x00000000 851975     ana        600        4956160    2          dest         
+0x00000000 819208     ana        600        4956160    2          dest         
+0x00000000 884745     ana        600        8192       2          dest         
+0x00000000 917514     ana        600        8192       2          dest         
+0x00000000 1835019    ana        600        524288     2          dest         
+0x00000000 1638412    ana        600        1093632    2          dest         
+0x00000000 1474573    ana        600        49152      2          dest         
+0x00000000 1507342    ana        600        49152      2          dest         
+0x00000000 1605647    ana        600        1093632    2          dest         
+
+1618762222: 
+-------------------------------------------------------
+ Esperando 10 segundos a la operación del semáforo <0x45916038> por el proceso <client>.
+-------------------------------------------------------
+1618762223: 
+-------------------------------------------------------
+Identificada operación sobre semáforo 0x45916038.
+Esperando 5 segundos para acceso a sección crítica.
+-------------------------------------------------------
+1618762226: 
+*******************************************************
+ Comprobar condiciones de cumplimiento de la clave <8>.
+*******************************************************
+1618762226: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <8> es <198>.
+********************************************[0m
+1618762226: 
+*******************************************************
+ Comprobar condiciones de cumplimiento de la clave <9>.
+*******************************************************
+1618762226: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <9> es <755>.
+********************************************[0m
+1618762226: 
+*************************************************
+:ok> CONTEXTO del ejercicio 5 preparado.
+*************************************************
+1618762226: COMMAND <ipcrm -M 0x45916038 > /dev/null 2>&1>
+1618762226: COMMAND <ipcrm -S 0x45916038 > /dev/null 2>&1>
+1618762226: COMMAND <who >> .trazas-3/alumno-45916038B>
+ana      :0           2021-04-18 17:54 (:0)
+1618762230: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 6.
+
+*************************************************
+
+
+1618762230: COMMAND <ipcrm -S 0x45916038 > /dev/null 2>&1>
+1618762230: COMMAND <ipcs -m >> .trazas-3/alumno-45916038B 2>&1>
+
+---- Segmentos memoria compartida ----
+key        shmid      propietario perms      bytes      nattch     estado      
+0x00000000 262144     ana        600        67108864   2          dest         
+0x00000000 360449     ana        600        524288     2          dest         
+0x00000000 1998850    ana        666        1024       1          dest         
+0x00000000 491523     ana        600        16777216   2          dest         
+0x00000000 1900548    ana        600        524288     2          dest         
+0x00000000 1933317    ana        600        524288     2          dest         
+0x00000000 589830     ana        600        524288     2          dest         
+0x00000000 851975     ana        600        4956160    2          dest         
+0x00000000 819208     ana        600        4956160    2          dest         
+0x00000000 884745     ana        600        8192       2          dest         
+0x00000000 917514     ana        600        8192       2          dest         
+0x00000000 1835019    ana        600        524288     2          dest         
+0x00000000 1638412    ana        600        1093632    2          dest         
+0x00000000 1474573    ana        600        49152      2          dest         
+0x00000000 1507342    ana        600        49152      2          dest         
+0x00000000 1605647    ana        600        1093632    2          dest         
+
+1618762230: 
+-------------------------------------------------------
+ Esperando 10 segundos a la operación del semáforo <0x45916038> por el proceso <client>.
+-------------------------------------------------------
+1618762231: 
+-------------------------------------------------------
+Identificada operación sobre semáforo 0x45916038.
+Esperando 5 segundos para acceso a sección crítica.
+-------------------------------------------------------
+1618762231: 
+-------------------------------------------------------
+Identificada operación sobre semáforo 0x45916038.
+Esperando 5 segundos para acceso a sección crítica.
+-------------------------------------------------------
+1618762231: 
+-------------------------------------------------------
+Identificada operación sobre semáforo 0x45916038.
+Esperando 5 segundos para acceso a sección crítica.
+-------------------------------------------------------
+1618762234: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <10> es <940>.
+********************************************[0m
+1618762234: 
+*******************************************************
+ Comprobar condiciones de cumplimiento de la clave <11>.
+*******************************************************
+1618762234: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <11> es <65>.
+********************************************[0m
+1618762234: 
+*************************************************
+:ok> CONTEXTO del ejercicio 6 preparado.
+*************************************************
+1618762234: COMMAND <ipcrm -M 0x45916038 > /dev/null 2>&1>
+1618762234: COMMAND <ipcrm -S 0x45916038 > /dev/null 2>&1>
+1618762234: COMMAND <who >> .trazas-3/alumno-45916038B>
+ana      :0           2021-04-18 17:54 (:0)
+1618762247: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 7.
+
+*************************************************
+
+
+1618762247: COMMAND <ipcrm -S 0x45916038 > /dev/null 2>&1>
+1618762247: COMMAND <ipcrm -M 0x45916038 > /dev/null 2>&1>
+1618762247: 
+----------------------------------------------------------------------------------
+ Se ha creado de NUEVO el segmento de memoria. Proceder a iniciar el ejercicio.
+----------------------------------------------------------------------------------
+1618762250: 
+-----------------------------------------------------------------------------------
+ Esperando 10 segundos a la creación del semáforo <0x45916038> por el proceso <client>.
+-----------------------------------------------------------------------------------
+1618762250: COMMAND <ipcs >> .trazas-3/alumno-45916038B 2>&1>
+
+------ Colas de mensajes -----
+key        msqid      propietario perms      bytes utilizados mensajes    
+
+---- Segmentos memoria compartida ----
+key        shmid      propietario perms      bytes      nattch     estado      
+0x00000000 262144     ana        600        67108864   2          dest         
+0x00000000 360449     ana        600        524288     2          dest         
+0x00000000 1998850    ana        666        1024       1          dest         
+0x00000000 491523     ana        600        16777216   2          dest         
+0x00000000 1900548    ana        600        524288     2          dest         
+0x00000000 1933317    ana        600        524288     2          dest         
+0x00000000 589830     ana        600        524288     2          dest         
+0x00000000 851975     ana        600        4956160    2          dest         
+0x00000000 819208     ana        600        4956160    2          dest         
+0x00000000 884745     ana        600        8192       2          dest         
+0x00000000 917514     ana        600        8192       2          dest         
+0x00000000 1835019    ana        600        524288     2          dest         
+0x00000000 1638412    ana        600        1093632    2          dest         
+0x00000000 1474573    ana        600        49152      2          dest         
+0x00000000 1507342    ana        600        49152      2          dest         
+0x00000000 1605647    ana        600        1093632    2          dest         
+0x00000000 2031632    ana        666        1024       1          dest         
+0x45916038 2064401    ana        666        1024       1                       
+
+------ Matrices semáforo -------
+key        semid      propietario perms      nsems     
+0x45916038 131072     ana        666        1         
+
+1618762250: 
+-------------------------------------------------------
+Se dispone de 2 segundos para destruir los recursos utilizados
+-------------------------------------------------------
+1618762252: COMMAND <ipcs >> .trazas-3/alumno-45916038B 2>&1>
+
+------ Colas de mensajes -----
+key        msqid      propietario perms      bytes utilizados mensajes    
+
+---- Segmentos memoria compartida ----
+key        shmid      propietario perms      bytes      nattch     estado      
+0x00000000 262144     ana        600        67108864   2          dest         
+0x00000000 360449     ana        600        524288     2          dest         
+0x00000000 491523     ana        600        16777216   2          dest         
+0x00000000 1900548    ana        600        524288     2          dest         
+0x00000000 1933317    ana        600        524288     2          dest         
+0x00000000 589830     ana        600        524288     2          dest         
+0x00000000 851975     ana        600        4956160    2          dest         
+0x00000000 819208     ana        600        4956160    2          dest         
+0x00000000 884745     ana        600        8192       2          dest         
+0x00000000 917514     ana        600        8192       2          dest         
+0x00000000 1835019    ana        600        524288     2          dest         
+0x00000000 1638412    ana        600        1093632    2          dest         
+0x00000000 1474573    ana        600        49152      2          dest         
+0x00000000 1507342    ana        600        49152      2          dest         
+0x00000000 1605647    ana        600        1093632    2          dest         
+
+------ Matrices semáforo -------
+key        semid      propietario perms      nsems     
+
+1618762252: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <12> es <714>.
+********************************************[0m
+1618762252: 
+*************************************************
+:ok> CONTEXTO del ejercicio 7 preparado.
+*************************************************
+1618762252: COMMAND <who >> .trazas-3/alumno-45916038B>
+ana      :0           2021-04-18 17:54 (:0)
+1618762265: COMMAND <find . -type f -newer .signature -print | awk -v pwd="`pwd`/.trazas-3" '{ if(index($0,pwd) != 1) print }' > /tmp/.asitmp>
+1618762265: COMMAND <cp ./client.? .trazas-3>
+1618762265: COMMAND <tar zcf save_file-45916038B .trazas-3 > /dev/null>
+1618762266: COMMAND <echo "\nopen u017633.ehu.es\nuser anonymous anonymous\npassive\ncd LAB2021/practica-3\nput save_file-45916038B 45916038B-18-4-18h06\n" | 	  ftp -n 2>&1 > /dev/null>
+1618762271: COMMAND <cp ./monitor3 /tmp/.monitor3>
+1618762271: COMMAND <cp -f /tmp/.monitor3 ./monitor3>
+1618762271: COMMAND <uname -a >> .trazas-3/alumno-45916038B>
+Linux ana-VirtualBox 4.15.0-20-generic #21-Ubuntu SMP Tue Apr 24 06:16:15 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux
+1618762271: COMMAND <ifconfig 2>&1 >> .trazas-3/alumno-45916038B>
+1618762271: COMMAND <echo -n 'MACHINE-ID: ' >> .trazas-3/alumno-45916038B>
+MACHINE-ID: 1618762271: COMMAND <cat /etc/machine-id >> .trazas-3/alumno-45916038B>
+3ee4344e935d4984ab86063ac6ab8a46
+1618762271: 
+La máquina está ya identificada.
+1618762271: RX: <OK Accepted>
+1618762271: TX: <CHECKPWD GpfgwNs6a1VOFC>
+1618762271: RX: <OK>
+1618762271: 
+********************************************
+           INICIANDO SESION
+********************************************
+1618762271: TX: <UUID 57206189-a595-4315-a2ca-430aed4a8e9a>
+1618762271: RX: <REGISTERED>
+1618762271: COMMAND <find . -type f -newer .signature -print | awk -v pwd="`pwd`/.trazas-3" '{ if(index($0,pwd) != 1) print }' > /tmp/.asitmp>
+1618762271: COMMAND <cp ./client.? .trazas-3>
+1618762271: COMMAND <tar zcf save_file-45916038B .trazas-3 > /dev/null>
+1618762271: COMMAND <echo "\nopen u017633.ehu.es\nuser anonymous anonymous\npassive\ncd LAB2021/practica-3\nput save_file-45916038B 45916038B-18-4-18h11\n" | 	  ftp -n 2>&1 > /dev/null>
+1618762280: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 1.
+
+*************************************************
+
+
+1618762280: COMMAND <ipcs -m >> .trazas-3/alumno-45916038B 2>&1>
+
+---- Segmentos memoria compartida ----
+key        shmid      propietario perms      bytes      nattch     estado      
+0x00000000 262144     ana        600        67108864   2          dest         
+0x00000000 360449     ana        600        524288     2          dest         
+0x00000000 491523     ana        600        16777216   2          dest         
+0x00000000 1900548    ana        600        524288     2          dest         
+0x00000000 1933317    ana        600        524288     2          dest         
+0x00000000 589830     ana        600        524288     2          dest         
+0x00000000 851975     ana        600        4956160    2          dest         
+0x00000000 819208     ana        600        4956160    2          dest         
+0x00000000 884745     ana        600        8192       2          dest         
+0x00000000 917514     ana        600        8192       2          dest         
+0x00000000 1835019    ana        600        524288     2          dest         
+0x00000000 1638412    ana        600        1093632    2          dest         
+0x00000000 1474573    ana        600        49152      2          dest         
+0x00000000 1507342    ana        600        49152      2          dest         
+0x00000000 1605647    ana        600        1093632    2          dest         
+
+1618762280: 
+[5m********************************************
+:ok> Ejercicio 1 bien realizado pendiente de obtener resultados.
+********************************************[0m
+1618762280: 
+--------------------------------------------------------------------------------------
+Esperando 15 segundos a que se enganche a la memoria compartida <0x45916038> el proceso <client>.
+--------------------------------------------------------------------------------------
+1618762282: 
+--------------------------------------------------------------------------------------------------
+ENGANCHADO. Esperando 5 segundos a que se DESenganche de la memoria compartida <0x45916038> el proceso <client>.
+--------------------------------------------------------------------------------------------------
+1618762285: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <3> es <393>.
+********************************************[0m
+1618762288: 
+*************************************************
+:ok> CONTEXTO del ejercicio 1 preparado.
+*************************************************
+1618762288: COMMAND <ipcrm -M 0x45916038 > /dev/null 2>&1>
+1618762288: COMMAND <who >> .trazas-3/alumno-45916038B>
+ana      :0           2021-04-18 17:54 (:0)
+1618762293: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 2.
+
+*************************************************
+
+
+1618762293: COMMAND <ipcrm -M 0x45916038 > /dev/null 2>&1>
+1618762293: 
+----------------------------------------------------------------------------------
+ Esperando 10 segundos a la creación de la memoria compartida <0x45916038> por el proceso <client>.
+----------------------------------------------------------------------------------
+1618762294: 
+--------------------------------------------------------------------------------------
+Esperando 15 segundos a que se enganche a la memoria compartida <0x45916038> el proceso <client>.
+--------------------------------------------------------------------------------------
+1618762294: 
+--------------------------------------------------------------------------------------------------
+ENGANCHADO. Esperando 5 segundos a que se DESenganche de la memoria compartida <0x45916038> el proceso <client>.
+--------------------------------------------------------------------------------------------------
+1618762296: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <4> es <610>.
+********************************************[0m
+1618762296: 
+*******************************************************
+ Comprobar condiciones de cumplimiento de la clave <2>.
+*******************************************************
+1618762296: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <2> es <284>.
+********************************************[0m
+1618762296: 
+*******************************************************
+ Comprobar condiciones de cumplimiento de la clave <5>.
+*******************************************************
+1618762296: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <5> es <463>.
+********************************************[0m
+1618762296: 
+*******************************************************
+ Comprobar condiciones de cumplimiento de la clave <1>.
+*******************************************************
+1618762296: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <1> es <915>.
+********************************************[0m
+1618762299: 
+*************************************************
+:ok> CONTEXTO del ejercicio 2 preparado.
+*************************************************
+1618762299: COMMAND <ipcrm -M 0x45916038 > /dev/null 2>&1>
+1618762299: COMMAND <who >> .trazas-3/alumno-45916038B>
+ana      :0           2021-04-18 17:54 (:0)
+1618762304: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 3.
+
+*************************************************
+
+
+1618762304: COMMAND <ipcrm -S 0x45916038 > /dev/null 2>&1>
+1618762304: 
+-----------------------------------------------------------------------------------
+ Esperando 10 segundos a la creación del semáforo <0x45916038> por el proceso <client>.
+-----------------------------------------------------------------------------------
+1618762307: 
+*******************************************************
+ Comprobar condiciones de cumplimiento de la clave <6>.
+*******************************************************
+1618762307: 
+[5m*************************************************
+:NOK> Intento fallido para conseguir la clave <6> .
+
+*************************************************[0m
+1618762307: 
+[5m-------------------------------------------------------
+Valor <161> de inicialización de semáforo <0x45916038> ERRONEO
+-------------------------------------------------------[0m
+1618762307: 
+[5m*************************************************
+:nok> No se ha realizado correctamente el ejercicio 3.
+
+*************************************************[0m
+1618762307: COMMAND <ipcrm -S 0x45916038 > /dev/null 2>&1>
+1618762307: COMMAND <who >> .trazas-3/alumno-45916038B>
+ana      :0           2021-04-18 17:54 (:0)
+1618762405: COMMAND <find . -type f -newer .signature -print | awk -v pwd="`pwd`/.trazas-3" '{ if(index($0,pwd) != 1) print }' > /tmp/.asitmp>
+1618762405: COMMAND <cp ./client.? .trazas-3>
+1618762405: COMMAND <tar zcf save_file-45916038B .trazas-3 > /dev/null>
+1618762405: COMMAND <echo "\nopen u017633.ehu.es\nuser anonymous anonymous\npassive\ncd LAB2021/practica-3\nput save_file-45916038B 45916038B-18-4-18h11\n" | 	  ftp -n 2>&1 > /dev/null>
+1618766308: COMMAND <cp ./monitor3 /tmp/.monitor3>
+1618766308: COMMAND <cp -f /tmp/.monitor3 ./monitor3>
+1618766308: COMMAND <uname -a >> .trazas-3/alumno-45916038B>
+Linux ana-VirtualBox 4.15.0-142-generic #146-Ubuntu SMP Tue Apr 13 01:11:19 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+1618766308: COMMAND <ifconfig 2>&1 >> .trazas-3/alumno-45916038B>
+1618766308: COMMAND <echo -n 'MACHINE-ID: ' >> .trazas-3/alumno-45916038B>
+MACHINE-ID: 1618766308: COMMAND <cat /etc/machine-id >> .trazas-3/alumno-45916038B>
+3ee4344e935d4984ab86063ac6ab8a46
+1618766308: 
+La máquina está ya identificada.
+1618766308: RX: <OK Accepted>
+1618766308: TX: <CHECKPWD GpfgwNs6a1VOFC>
+1618766308: RX: <OK>
+1618766308: 
+********************************************
+           INICIANDO SESION
+********************************************
+1618766308: TX: <UUID 57206189-a595-4315-a2ca-430aed4a8e9a>
+1618766308: RX: <REGISTERED>
+1618766308: COMMAND <find . -type f -newer .signature -print | awk -v pwd="`pwd`/.trazas-3" '{ if(index($0,pwd) != 1) print }' > /tmp/.asitmp>
+1618766308: COMMAND <cp ./client.? .trazas-3>
+1618766308: COMMAND <tar zcf save_file-45916038B .trazas-3 > /dev/null>
+1618766309: COMMAND <echo "\nopen u017633.ehu.es\nuser anonymous anonymous\npassive\ncd LAB2021/practica-3\nput save_file-45916038B 45916038B-18-4-19h18\n" | 	  ftp -n 2>&1 > /dev/null>
+1618766318: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 1.
+
+*************************************************
+
+
+1618766318: COMMAND <ipcs -m >> .trazas-3/alumno-45916038B 2>&1>
+
+---- Segmentos memoria compartida ----
+key        shmid      propietario perms      bytes      nattch     estado      
+0x00000000 262144     ana        600        524288     2          dest         
+0x00000000 294913     ana        600        67108864   2          dest         
+0x00000000 393218     ana        600        524288     2          dest         
+0x00000000 491523     ana        600        524288     2          dest         
+0x00000000 524292     ana        600        524288     2          dest         
+0x00000000 557061     ana        600        524288     2          dest         
+0x00000000 589830     ana        600        524288     2          dest         
+
+1618766318: 
+[5m********************************************
+:ok> Ejercicio 1 bien realizado pendiente de obtener resultados.
+********************************************[0m
+1618766318: 
+--------------------------------------------------------------------------------------
+Esperando 15 segundos a que se enganche a la memoria compartida <0x45916038> el proceso <client>.
+--------------------------------------------------------------------------------------
+1618766320: 
+--------------------------------------------------------------------------------------------------
+ENGANCHADO. Esperando 5 segundos a que se DESenganche de la memoria compartida <0x45916038> el proceso <client>.
+--------------------------------------------------------------------------------------------------
+1618766323: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <3> es <393>.
+********************************************[0m
+1618766326: 
+*************************************************
+:ok> CONTEXTO del ejercicio 1 preparado.
+*************************************************
+1618766326: COMMAND <ipcrm -M 0x45916038 > /dev/null 2>&1>
+1618766326: COMMAND <who >> .trazas-3/alumno-45916038B>
+ana      :0           2021-04-18 19:04 (:0)
+1618766327: COMMAND <who >> .trazas-3/alumno-45916038B>
+ana      :0           2021-04-18 19:04 (:0)
+1618766328: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 2.
+
+*************************************************
+
+
+1618766328: COMMAND <ipcrm -M 0x45916038 > /dev/null 2>&1>
+1618766328: 
+----------------------------------------------------------------------------------
+ Esperando 10 segundos a la creación de la memoria compartida <0x45916038> por el proceso <client>.
+----------------------------------------------------------------------------------
+1618766329: 
+--------------------------------------------------------------------------------------
+Esperando 15 segundos a que se enganche a la memoria compartida <0x45916038> el proceso <client>.
+--------------------------------------------------------------------------------------
+1618766329: 
+--------------------------------------------------------------------------------------------------
+ENGANCHADO. Esperando 5 segundos a que se DESenganche de la memoria compartida <0x45916038> el proceso <client>.
+--------------------------------------------------------------------------------------------------
+1618766331: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <4> es <610>.
+********************************************[0m
+1618766331: 
+*******************************************************
+ Comprobar condiciones de cumplimiento de la clave <2>.
+*******************************************************
+1618766331: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <2> es <284>.
+********************************************[0m
+1618766331: 
+*******************************************************
+ Comprobar condiciones de cumplimiento de la clave <5>.
+*******************************************************
+1618766331: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <5> es <463>.
+********************************************[0m
+1618766331: 
+*******************************************************
+ Comprobar condiciones de cumplimiento de la clave <1>.
+*******************************************************
+1618766331: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <1> es <915>.
+********************************************[0m
+1618766334: 
+*************************************************
+:ok> CONTEXTO del ejercicio 2 preparado.
+*************************************************
+1618766334: COMMAND <ipcrm -M 0x45916038 > /dev/null 2>&1>
+1618766334: COMMAND <who >> .trazas-3/alumno-45916038B>
+ana      :0           2021-04-18 19:04 (:0)
+1618766338: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 3.
+
+*************************************************
+
+
+1618766338: COMMAND <ipcrm -S 0x45916038 > /dev/null 2>&1>
+1618766338: 
+-----------------------------------------------------------------------------------
+ Esperando 10 segundos a la creación del semáforo <0x45916038> por el proceso <client>.
+-----------------------------------------------------------------------------------
+1618766339: 
+*******************************************************
+ Comprobar condiciones de cumplimiento de la clave <6>.
+*******************************************************
+1618766339: 
+[5m*************************************************
+:NOK> Intento fallido para conseguir la clave <6> .
+
+*************************************************[0m
+1618766339: 
+[5m-------------------------------------------------------
+Valor <32> de inicialización de semáforo <0x45916038> ERRONEO
+-------------------------------------------------------[0m
+1618766339: 
+[5m*************************************************
+:nok> No se ha realizado correctamente el ejercicio 3.
+
+*************************************************[0m
+1618766339: COMMAND <ipcrm -S 0x45916038 > /dev/null 2>&1>
+1618766339: COMMAND <who >> .trazas-3/alumno-45916038B>
+ana      :0           2021-04-18 19:04 (:0)
+1618766365: COMMAND <find . -type f -newer .signature -print | awk -v pwd="`pwd`/.trazas-3" '{ if(index($0,pwd) != 1) print }' > /tmp/.asitmp>
+1618766365: COMMAND <cp ./client.? .trazas-3>
+1618766365: COMMAND <tar zcf save_file-45916038B .trazas-3 > /dev/null>
+1618766365: COMMAND <echo "\nopen u017633.ehu.es\nuser anonymous anonymous\npassive\ncd LAB2021/practica-3\nput save_file-45916038B 45916038B-18-4-19h18\n" | 	  ftp -n 2>&1 > /dev/null>
+1618766393: COMMAND <cp ./monitor3 /tmp/.monitor3>
+1618766393: COMMAND <cp -f /tmp/.monitor3 ./monitor3>
+1618766393: COMMAND <uname -a >> .trazas-3/alumno-45916038B>
+Linux ana-VirtualBox 4.15.0-142-generic #146-Ubuntu SMP Tue Apr 13 01:11:19 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+1618766393: COMMAND <ifconfig 2>&1 >> .trazas-3/alumno-45916038B>
+1618766393: COMMAND <echo -n 'MACHINE-ID: ' >> .trazas-3/alumno-45916038B>
+MACHINE-ID: 1618766393: COMMAND <cat /etc/machine-id >> .trazas-3/alumno-45916038B>
+3ee4344e935d4984ab86063ac6ab8a46
+1618766393: 
+La máquina está ya identificada.
+1618766393: RX: <OK Accepted>
+1618766393: TX: <CHECKPWD GpfgwNs6a1VOFC>
+1618766393: RX: <OK>
+1618766393: 
+********************************************
+           INICIANDO SESION
+********************************************
+1618766393: TX: <UUID 57206189-a595-4315-a2ca-430aed4a8e9a>
+1618766393: RX: <REGISTERED>
+1618766393: COMMAND <find . -type f -newer .signature -print | awk -v pwd="`pwd`/.trazas-3" '{ if(index($0,pwd) != 1) print }' > /tmp/.asitmp>
+1618766393: COMMAND <cp ./client.? .trazas-3>
+1618766393: COMMAND <tar zcf save_file-45916038B .trazas-3 > /dev/null>
+1618766393: COMMAND <echo "\nopen u017633.ehu.es\nuser anonymous anonymous\npassive\ncd LAB2021/practica-3\nput save_file-45916038B 45916038B-18-4-19h19\n" | 	  ftp -n 2>&1 > /dev/null>
+1618766396: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 1.
+
+*************************************************
+
+
+1618766396: COMMAND <ipcs -m >> .trazas-3/alumno-45916038B 2>&1>
+
+---- Segmentos memoria compartida ----
+key        shmid      propietario perms      bytes      nattch     estado      
+0x00000000 262144     ana        600        524288     2          dest         
+0x00000000 294913     ana        600        67108864   2          dest         
+0x00000000 393218     ana        600        524288     2          dest         
+0x00000000 491523     ana        600        524288     2          dest         
+0x00000000 524292     ana        600        524288     2          dest         
+0x00000000 557061     ana        600        524288     2          dest         
+0x00000000 589830     ana        600        524288     2          dest         
+
+1618766396: 
+[5m********************************************
+:ok> Ejercicio 1 bien realizado pendiente de obtener resultados.
+********************************************[0m
+1618766396: 
+--------------------------------------------------------------------------------------
+Esperando 15 segundos a que se enganche a la memoria compartida <0x45916038> el proceso <client>.
+--------------------------------------------------------------------------------------
+1618766397: 
+--------------------------------------------------------------------------------------------------
+ENGANCHADO. Esperando 5 segundos a que se DESenganche de la memoria compartida <0x45916038> el proceso <client>.
+--------------------------------------------------------------------------------------------------
+1618766400: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <3> es <393>.
+********************************************[0m
+1618766403: 
+*************************************************
+:ok> CONTEXTO del ejercicio 1 preparado.
+*************************************************
+1618766403: COMMAND <ipcrm -M 0x45916038 > /dev/null 2>&1>
+1618766403: COMMAND <who >> .trazas-3/alumno-45916038B>
+ana      :0           2021-04-18 19:04 (:0)
+1618766405: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 2.
+
+*************************************************
+
+
+1618766405: COMMAND <ipcrm -M 0x45916038 > /dev/null 2>&1>
+1618766405: 
+----------------------------------------------------------------------------------
+ Esperando 10 segundos a la creación de la memoria compartida <0x45916038> por el proceso <client>.
+----------------------------------------------------------------------------------
+1618766415: 
+[5m*************************************************
+:NOK> Intento fallido para conseguir la clave <4> .
+
+*************************************************[0m
+1618766415: 
+-------------------------------------------------------
+RESPUESTA NO RECIBIDA A TIEMPO.
+-------------------------------------------------------
+1618766415: 
+[5m*************************************************
+:nok> No se ha realizado correctamente el ejercicio 2.
+
+*************************************************[0m
+1618766415: COMMAND <ipcrm -M 0x45916038 > /dev/null 2>&1>
+1618766415: COMMAND <who >> .trazas-3/alumno-45916038B>
+ana      :0           2021-04-18 19:04 (:0)
+1618766422: COMMAND <find . -type f -newer .signature -print | awk -v pwd="`pwd`/.trazas-3" '{ if(index($0,pwd) != 1) print }' > /tmp/.asitmp>
+1618766422: COMMAND <cp ./client.? .trazas-3>
+1618766422: COMMAND <tar zcf save_file-45916038B .trazas-3 > /dev/null>
+1618766422: COMMAND <echo "\nopen u017633.ehu.es\nuser anonymous anonymous\npassive\ncd LAB2021/practica-3\nput save_file-45916038B 45916038B-18-4-19h19\n" | 	  ftp -n 2>&1 > /dev/null>
+1618766429: COMMAND <cp ./monitor3 /tmp/.monitor3>
+1618766429: COMMAND <cp -f /tmp/.monitor3 ./monitor3>
+1618766429: COMMAND <uname -a >> .trazas-3/alumno-45916038B>
+Linux ana-VirtualBox 4.15.0-142-generic #146-Ubuntu SMP Tue Apr 13 01:11:19 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+1618766429: COMMAND <ifconfig 2>&1 >> .trazas-3/alumno-45916038B>
+1618766429: COMMAND <echo -n 'MACHINE-ID: ' >> .trazas-3/alumno-45916038B>
+MACHINE-ID: 1618766429: COMMAND <cat /etc/machine-id >> .trazas-3/alumno-45916038B>
+3ee4344e935d4984ab86063ac6ab8a46
+1618766429: 
+La máquina está ya identificada.
+1618766429: RX: <OK Accepted>
+1618766429: TX: <CHECKPWD GpfgwNs6a1VOFC>
+1618766429: RX: <OK>
+1618766429: 
+********************************************
+           INICIANDO SESION
+********************************************
+1618766429: TX: <UUID 57206189-a595-4315-a2ca-430aed4a8e9a>
+1618766429: RX: <REGISTERED>
+1618766429: COMMAND <find . -type f -newer .signature -print | awk -v pwd="`pwd`/.trazas-3" '{ if(index($0,pwd) != 1) print }' > /tmp/.asitmp>
+1618766429: COMMAND <cp ./client.? .trazas-3>
+1618766429: COMMAND <tar zcf save_file-45916038B .trazas-3 > /dev/null>
+1618766429: COMMAND <echo "\nopen u017633.ehu.es\nuser anonymous anonymous\npassive\ncd LAB2021/practica-3\nput save_file-45916038B 45916038B-18-4-19h20\n" | 	  ftp -n 2>&1 > /dev/null>
+1618766432: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 1.
+
+*************************************************
+
+
+1618766432: COMMAND <ipcs -m >> .trazas-3/alumno-45916038B 2>&1>
+
+---- Segmentos memoria compartida ----
+key        shmid      propietario perms      bytes      nattch     estado      
+0x00000000 262144     ana        600        524288     2          dest         
+0x00000000 294913     ana        600        67108864   2          dest         
+0x00000000 393218     ana        600        524288     2          dest         
+0x00000000 491523     ana        600        524288     2          dest         
+0x00000000 524292     ana        600        524288     2          dest         
+0x00000000 557061     ana        600        524288     2          dest         
+0x00000000 589830     ana        600        524288     2          dest         
+
+1618766432: 
+[5m********************************************
+:ok> Ejercicio 1 bien realizado pendiente de obtener resultados.
+********************************************[0m
+1618766432: 
+--------------------------------------------------------------------------------------
+Esperando 15 segundos a que se enganche a la memoria compartida <0x45916038> el proceso <client>.
+--------------------------------------------------------------------------------------
+1618766433: 
+--------------------------------------------------------------------------------------------------
+ENGANCHADO. Esperando 5 segundos a que se DESenganche de la memoria compartida <0x45916038> el proceso <client>.
+--------------------------------------------------------------------------------------------------
+1618766436: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <3> es <393>.
+********************************************[0m
+1618766439: 
+*************************************************
+:ok> CONTEXTO del ejercicio 1 preparado.
+*************************************************
+1618766439: COMMAND <ipcrm -M 0x45916038 > /dev/null 2>&1>
+1618766439: COMMAND <who >> .trazas-3/alumno-45916038B>
+ana      :0           2021-04-18 19:04 (:0)
+1618766441: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 2.
+
+*************************************************
+
+
+1618766441: COMMAND <ipcrm -M 0x45916038 > /dev/null 2>&1>
+1618766441: 
+----------------------------------------------------------------------------------
+ Esperando 10 segundos a la creación de la memoria compartida <0x45916038> por el proceso <client>.
+----------------------------------------------------------------------------------
+1618766442: 
+--------------------------------------------------------------------------------------
+Esperando 15 segundos a que se enganche a la memoria compartida <0x45916038> el proceso <client>.
+--------------------------------------------------------------------------------------
+1618766442: 
+--------------------------------------------------------------------------------------------------
+ENGANCHADO. Esperando 5 segundos a que se DESenganche de la memoria compartida <0x45916038> el proceso <client>.
+--------------------------------------------------------------------------------------------------
+1618766444: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <4> es <610>.
+********************************************[0m
+1618766444: 
+*******************************************************
+ Comprobar condiciones de cumplimiento de la clave <2>.
+*******************************************************
+1618766444: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <2> es <284>.
+********************************************[0m
+1618766444: 
+*******************************************************
+ Comprobar condiciones de cumplimiento de la clave <5>.
+*******************************************************
+1618766444: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <5> es <463>.
+********************************************[0m
+1618766444: 
+*******************************************************
+ Comprobar condiciones de cumplimiento de la clave <1>.
+*******************************************************
+1618766444: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <1> es <915>.
+********************************************[0m
+1618766447: 
+*************************************************
+:ok> CONTEXTO del ejercicio 2 preparado.
+*************************************************
+1618766447: COMMAND <ipcrm -M 0x45916038 > /dev/null 2>&1>
+1618766447: COMMAND <who >> .trazas-3/alumno-45916038B>
+ana      :0           2021-04-18 19:04 (:0)
+1618766451: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 3.
+
+*************************************************
+
+
+1618766451: COMMAND <ipcrm -S 0x45916038 > /dev/null 2>&1>
+1618766451: 
+-----------------------------------------------------------------------------------
+ Esperando 10 segundos a la creación del semáforo <0x45916038> por el proceso <client>.
+-----------------------------------------------------------------------------------
+1618766452: 
+*******************************************************
+ Comprobar condiciones de cumplimiento de la clave <6>.
+*******************************************************
+1618766452: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <6> es <104>.
+********************************************[0m
+1618766455: 
+*************************************************
+:ok> CONTEXTO del ejercicio 3 preparado.
+*************************************************
+1618766455: COMMAND <ipcrm -S 0x45916038 > /dev/null 2>&1>
+1618766455: COMMAND <who >> .trazas-3/alumno-45916038B>
+ana      :0           2021-04-18 19:04 (:0)
+1618766461: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 4.
+
+*************************************************
+
+
+1618766461: COMMAND <ipcrm -S 0x45916038 > /dev/null 2>&1>
+1618766461: 
+-----------------------------------------------------------------------------------
+ Esperando 10 segundos a la creación del semáforo <0x45916038> por el proceso <client>.
+-----------------------------------------------------------------------------------
+1618766463: 
+*******************************************************
+ Comprobar condiciones de cumplimiento de la clave <7>.
+*******************************************************
+1618766463: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <7> es <597>.
+********************************************[0m
+1618766466: 
+*************************************************
+:ok> CONTEXTO del ejercicio 4 preparado.
+*************************************************
+1618766466: COMMAND <ipcrm -S 0x45916038 > /dev/null 2>&1>
+1618766466: COMMAND <who >> .trazas-3/alumno-45916038B>
+ana      :0           2021-04-18 19:04 (:0)
+1618766472: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 5.
+
+*************************************************
+
+
+1618766472: COMMAND <ipcrm -S 0x45916038 > /dev/null 2>&1>
+1618766472: COMMAND <ipcs -m >> .trazas-3/alumno-45916038B 2>&1>
+
+---- Segmentos memoria compartida ----
+key        shmid      propietario perms      bytes      nattch     estado      
+0x00000000 262144     ana        600        524288     2          dest         
+0x00000000 294913     ana        600        67108864   2          dest         
+0x00000000 393218     ana        600        524288     2          dest         
+0x00000000 491523     ana        600        524288     2          dest         
+0x00000000 524292     ana        600        524288     2          dest         
+0x00000000 557061     ana        600        524288     2          dest         
+0x00000000 589830     ana        600        524288     2          dest         
+
+1618766472: 
+-------------------------------------------------------
+ Esperando 10 segundos a la operación del semáforo <0x45916038> por el proceso <client>.
+-------------------------------------------------------
+1618766473: 
+-------------------------------------------------------
+Identificada operación sobre semáforo 0x45916038.
+Esperando 5 segundos para acceso a sección crítica.
+-------------------------------------------------------
+1618766476: 
+*******************************************************
+ Comprobar condiciones de cumplimiento de la clave <8>.
+*******************************************************
+1618766476: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <8> es <198>.
+********************************************[0m
+1618766476: 
+*******************************************************
+ Comprobar condiciones de cumplimiento de la clave <9>.
+*******************************************************
+1618766476: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <9> es <755>.
+********************************************[0m
+1618766476: 
+*************************************************
+:ok> CONTEXTO del ejercicio 5 preparado.
+*************************************************
+1618766476: COMMAND <ipcrm -M 0x45916038 > /dev/null 2>&1>
+1618766476: COMMAND <ipcrm -S 0x45916038 > /dev/null 2>&1>
+1618766476: COMMAND <who >> .trazas-3/alumno-45916038B>
+ana      :0           2021-04-18 19:04 (:0)
+1618766481: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 6.
+
+*************************************************
+
+
+1618766481: COMMAND <ipcrm -S 0x45916038 > /dev/null 2>&1>
+1618766481: COMMAND <ipcs -m >> .trazas-3/alumno-45916038B 2>&1>
+
+---- Segmentos memoria compartida ----
+key        shmid      propietario perms      bytes      nattch     estado      
+0x00000000 262144     ana        600        524288     2          dest         
+0x00000000 294913     ana        600        67108864   2          dest         
+0x00000000 393218     ana        600        524288     2          dest         
+0x00000000 491523     ana        600        524288     2          dest         
+0x00000000 524292     ana        600        524288     2          dest         
+0x00000000 557061     ana        600        524288     2          dest         
+0x00000000 589830     ana        600        524288     2          dest         
+0x00000000 819207     ana        666        1024       1          dest         
+
+1618766481: 
+-------------------------------------------------------
+ Esperando 10 segundos a la operación del semáforo <0x45916038> por el proceso <client>.
+-------------------------------------------------------
+1618766482: 
+-------------------------------------------------------
+Identificada operación sobre semáforo 0x45916038.
+Esperando 5 segundos para acceso a sección crítica.
+-------------------------------------------------------
+1618766482: 
+-------------------------------------------------------
+Identificada operación sobre semáforo 0x45916038.
+Esperando 5 segundos para acceso a sección crítica.
+-------------------------------------------------------
+1618766482: 
+-------------------------------------------------------
+Identificada operación sobre semáforo 0x45916038.
+Esperando 5 segundos para acceso a sección crítica.
+-------------------------------------------------------
+1618766485: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <10> es <940>.
+********************************************[0m
+1618766485: 
+*******************************************************
+ Comprobar condiciones de cumplimiento de la clave <11>.
+*******************************************************
+1618766485: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <11> es <65>.
+********************************************[0m
+1618766485: 
+*************************************************
+:ok> CONTEXTO del ejercicio 6 preparado.
+*************************************************
+1618766485: COMMAND <ipcrm -M 0x45916038 > /dev/null 2>&1>
+1618766485: COMMAND <ipcrm -S 0x45916038 > /dev/null 2>&1>
+1618766485: COMMAND <who >> .trazas-3/alumno-45916038B>
+ana      :0           2021-04-18 19:04 (:0)
+1618766488: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 7.
+
+*************************************************
+
+
+1618766488: COMMAND <ipcrm -S 0x45916038 > /dev/null 2>&1>
+1618766488: COMMAND <ipcrm -M 0x45916038 > /dev/null 2>&1>
+1618766488: 
+----------------------------------------------------------------------------------
+ Se ha creado de NUEVO el segmento de memoria. Proceder a iniciar el ejercicio.
+----------------------------------------------------------------------------------
+1618766491: 
+-----------------------------------------------------------------------------------
+ Esperando 10 segundos a la creación del semáforo <0x45916038> por el proceso <client>.
+-----------------------------------------------------------------------------------
+1618766491: COMMAND <ipcs >> .trazas-3/alumno-45916038B 2>&1>
+
+------ Colas de mensajes -----
+key        msqid      propietario perms      bytes utilizados mensajes    
+
+---- Segmentos memoria compartida ----
+key        shmid      propietario perms      bytes      nattch     estado      
+0x00000000 262144     ana        600        524288     2          dest         
+0x00000000 294913     ana        600        67108864   2          dest         
+0x00000000 393218     ana        600        524288     2          dest         
+0x00000000 491523     ana        600        524288     2          dest         
+0x00000000 524292     ana        600        524288     2          dest         
+0x00000000 557061     ana        600        524288     2          dest         
+0x00000000 589830     ana        600        524288     2          dest         
+0x00000000 819207     ana        666        1024       1          dest         
+0x00000000 851976     ana        666        1024       1          dest         
+0x45916038 884745     ana        666        1024       1                       
+
+------ Matrices semáforo -------
+key        semid      propietario perms      nsems     
+0x45916038 163840     ana        666        1         
+
+1618766491: 
+-------------------------------------------------------
+Se dispone de 2 segundos para destruir los recursos utilizados
+-------------------------------------------------------
+1618766493: COMMAND <ipcs >> .trazas-3/alumno-45916038B 2>&1>
+
+------ Colas de mensajes -----
+key        msqid      propietario perms      bytes utilizados mensajes    
+
+---- Segmentos memoria compartida ----
+key        shmid      propietario perms      bytes      nattch     estado      
+0x00000000 262144     ana        600        524288     2          dest         
+0x00000000 294913     ana        600        67108864   2          dest         
+0x00000000 393218     ana        600        524288     2          dest         
+0x00000000 491523     ana        600        524288     2          dest         
+0x00000000 524292     ana        600        524288     2          dest         
+0x00000000 557061     ana        600        524288     2          dest         
+0x00000000 589830     ana        600        524288     2          dest         
+
+------ Matrices semáforo -------
+key        semid      propietario perms      nsems     
+
+1618766493: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <12> es <714>.
+********************************************[0m
+1618766493: 
+*************************************************
+:ok> CONTEXTO del ejercicio 7 preparado.
+*************************************************
+1618766493: COMMAND <who >> .trazas-3/alumno-45916038B>
+ana      :0           2021-04-18 19:04 (:0)
+1618766509: COMMAND <find . -type f -newer .signature -print | awk -v pwd="`pwd`/.trazas-3" '{ if(index($0,pwd) != 1) print }' > /tmp/.asitmp>
+1618766509: COMMAND <cp ./client.? .trazas-3>
+1618766509: COMMAND <tar zcf save_file-45916038B .trazas-3 > /dev/null>
+1618766509: COMMAND <echo "\nopen u017633.ehu.es\nuser anonymous anonymous\npassive\ncd LAB2021/practica-3\nput save_file-45916038B 45916038B-18-4-19h20\n" | 	  ftp -n 2>&1 > /dev/null>

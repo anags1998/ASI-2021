@@ -1,0 +1,70 @@
+//INCLUDES--------------------------------------------------------
+#include <sys/types.h>
+#include <sys/socket.h>
+
+#include <arpa/inet.h>
+
+#include <unistd.h>
+#include <strings.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <signal.h>
+#include <sys/wait.h>
+#include <sys/sem.h>
+#include <sys/shm.h>
+
+//VARIABLES GLOBALES-----------------------------------------------
+#define CLAVE 0x45916038L
+#define MEM 1024
+#define PORT 3010
+#define TAM 256
+#define MAXCX 8
+
+
+
+void espera(){
+wait(NULL);
+return;
+}
+
+//FUNCION PRINCIPAL-------------------------------------------------
+
+int main(int argc, char **argv){
+
+struct sockaddr_in servidor,cliente;
+int dc,ds,tam,pidH;
+char cad[256],cad1[256];
+
+signal(SIGCHLD,espera);
+servidor.sin_addr.s_addr = INADDR_ANY;
+servidor.sin_port = htons(PORT);
+servidor.sin_family = AF_INET;
+bzero(&(servidor.sin_zero),8);
+
+ds = socket(AF_INET,SOCK_STREAM,0);
+bind(ds,(struct sockaddr*)&servidor,sizeof(servidor));
+listen(ds,SOMAXCONN);
+
+while(1){
+	tam = sizeof(cliente);
+	dc = accept(ds,(struct sockaddr*)&cliente,&tam);
+	pidH == fork();
+	if(pidH == 0){
+		close(ds);
+		while(read(dc,cad,sizeof(cad))>0){
+			if(*cad == 'h'){	
+				sprintf(cad1,"OK\n");
+				write(dc,cad1,sizeof(cad1)+1);
+			}
+		}
+		close(dc);
+		exit(0);
+	}else{
+
+//	close(dc);
+}
+}
+//close(ds);
+return(EXIT_SUCCESS);
+}

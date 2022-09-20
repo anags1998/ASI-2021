@@ -1,0 +1,303 @@
+1621937844: COMMAND <cp ./examen4 /tmp/.examen4>
+1621937844: COMMAND <cp -f /tmp/.examen4 ./examen4>
+1621937844: COMMAND <uname -a >> .trazas-4/alumno-78997168B>
+Linux felix-VirtualBox 5.8.0-45-generic #51~20.04.1-Ubuntu SMP Tue Feb 23 13:46:31 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+1621937844: COMMAND <ifconfig 2>&1 >> .trazas-4/alumno-78997168B>
+1621937844: COMMAND <echo -n 'MACHINE-ID: ' >> .trazas-4/alumno-78997168B>
+MACHINE-ID: 1621937844: COMMAND <cat /etc/machine-id >> .trazas-4/alumno-78997168B>
+81244b7ab4014eaf8f1cae6b9c5cb0dd
+1621937844: 
+La máquina está ya identificada.
+1621937844: RX: <OK Accepted>
+1621937850: TX: <CHECKPWD +1hvPcRfx7uLrp>
+1621937850: RX: <NEW>
+1621937850: 
+***************************************************
+El usuario no tiene un password público registrado.
+Por favor, confirme el password para darlo de alta.
+[5mEl password debe recordarlo para futuras sesiones.[0m
+Utilice una secuencia de caracteres personal privados.
+En el servidor se guardará una versión encriptada.
+Si no está de acuerdo con el password que ha utilizado
+interrumpa el proceso y comience de nuevo el registro.
+Posteriormente será más complicado modificarlo. Tendrá.
+que ponerse en contacto con el administrador:
+                 armando.ferro@ehu.eus
+***************************************************
+1621937857: TX: <CREATEPWD +1hvPcRfx7uLrp>
+1621937857: [5m
+LOGIN: Registrado password público <+1hvPcRfx7uLrp>.[0m
+1621937857: RX: <DONE>
+1621937857: 
+********************************************
+           INICIANDO SESION
+********************************************
+1621937857: TX: <UUID 2d98f997-aca3-4b77-b58e-83803551cdaf>
+1621937857: RX: <REGISTERED>
+1621937857: COMMAND <find . -type f -newer .signature -print | awk -v pwd="`pwd`/.trazas-4" '{ if(index($0,pwd) != 1) print }' > /tmp/.asitmp>
+1621937857: COMMAND <cp ./client.? .trazas-4>
+1621937857: COMMAND <tar zcf save_file-78997168B .trazas-4 > /dev/null>
+1621937857: COMMAND <echo "\nopen u017633.ehu.es\nuser anonymous anonymous\npassive\ncd LAB2021/examen-4\nput save_file-78997168B 78997168B-25-5-12h17\n" | 	  ftp -n 2>&1 > /dev/null>
+1621937858: COMMAND <ipcs -m >> .trazas-4/alumno-78997168B 2>&1>
+
+---- Segmentos memoria compartida ----
+key        shmid      propietario perms      bytes      nattch     estado      
+0x00000000 65536      felix      600        16777216   2          dest         
+0x00000000 2          felix      600        16384      1          dest         
+0x00000000 131076     felix      600        524288     2          dest         
+0x00000000 196613     felix      600        1916928    2          dest         
+0x00000000 6          felix      600        4325376    2          dest         
+0x00000000 163847     felix      600        1916928    2          dest         
+0x00000000 65544      felix      600        16384      1          dest         
+0x00000000 9          felix      600        524288     2          dest         
+0x00000000 131082     felix      600        4194304    2          dest         
+0x00000000 11         felix      600        3964928    2          dest         
+0x00000000 65548      felix      600        1802240    1          dest         
+0x00000000 65549      felix      600        2129920    2          dest         
+0x00000000 196622     felix      600        2359296    2          dest         
+0x00000000 32783      felix      600        16777216   2          dest         
+0x00000000 131088     felix      600        2162688    2          dest         
+0x00000000 65553      felix      600        1982464    1          dest         
+0x00000000 131092     felix      600        16777216   2          dest         
+0x00000000 32790      felix      600        4194304    2          dest         
+0x00000000 23         felix      600        524288     2          dest         
+0x00000000 65563      felix      600        524288     2          dest         
+0x00000000 65564      felix      600        4194304    2          dest         
+0x00000000 65565      felix      600        3964928    2          dest         
+0x00000000 30         felix      600        524288     2          dest         
+0x00000000 65567      felix      600        16777216   2          dest         
+0x00000000 98336      felix      600        524288     2          dest         
+0x00000000 34         felix      600        3964928    2          dest         
+0x00000000 32804      felix      600        81920      2          dest         
+0x00000000 32805      felix      600        81920      2          dest         
+0x00000000 65575      felix      600        33554432   2          dest         
+0x00000000 131113     felix      600        4050944    2          dest         
+0x00000000 163885     felix      600        3964928    2          dest         
+0x00000000 163886     felix      600        1982464    2          dest         
+0x00000000 163887     felix      600        2359296    2          dest         
+0x00000000 98352      felix      600        524288     2          dest         
+0x00000000 163889     felix      600        2359296    2          dest         
+0x00000000 50         felix      600        69632      2          dest         
+0x00000000 51         felix      600        69632      2          dest         
+0x00000000 163892     felix      600        2359296    2          dest         
+0x00000000 163893     felix      600        2162688    2          dest         
+0x00000000 131126     felix      600        4050944    2          dest         
+0x00000000 131127     felix      600        1982464    1          dest         
+0x00000000 32824      felix      600        524288     2          dest         
+0x00000000 163897     felix      600        2359296    2          dest         
+0x00000000 32826      felix      600        1916928    2          dest         
+0x00000000 163900     felix      600        2162688    2          dest         
+0x00000000 32829      felix      600        524288     2          dest         
+0x00000000 32830      felix      600        4194304    2          dest         
+0x00000000 32831      felix      600        2162688    2          dest         
+0x00000000 163904     felix      600        2359296    2          dest         
+0x00000000 163905     felix      600        3964928    2          dest         
+0x00000000 163906     felix      600        2359296    2          dest         
+0x00000000 131140     felix      600        2359296    2          dest         
+
+1621937881: COMMAND <find . -type f -newer .signature -print | awk -v pwd="`pwd`/.trazas-4" '{ if(index($0,pwd) != 1) print }' > /tmp/.asitmp>
+1621937881: COMMAND <cp ./client.? .trazas-4>
+1621937881: COMMAND <tar zcf save_file-78997168B .trazas-4 > /dev/null>
+1621937881: COMMAND <echo "\nopen u017633.ehu.es\nuser anonymous anonymous\npassive\ncd LAB2021/examen-4\nput save_file-78997168B 78997168B-25-5-12h17\n" | 	  ftp -n 2>&1 > /dev/null>
+1621937887: COMMAND <cp ./examen4 /tmp/.examen4>
+1621937887: COMMAND <cp -f /tmp/.examen4 ./examen4>
+1621937887: COMMAND <uname -a >> .trazas-4/alumno-78997168B>
+Linux felix-VirtualBox 5.8.0-45-generic #51~20.04.1-Ubuntu SMP Tue Feb 23 13:46:31 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+1621937887: COMMAND <ifconfig 2>&1 >> .trazas-4/alumno-78997168B>
+1621937887: COMMAND <echo -n 'MACHINE-ID: ' >> .trazas-4/alumno-78997168B>
+MACHINE-ID: 1621937887: COMMAND <cat /etc/machine-id >> .trazas-4/alumno-78997168B>
+81244b7ab4014eaf8f1cae6b9c5cb0dd
+1621937887: 
+La máquina está ya identificada.
+1621937887: RX: <OK Accepted>
+1621937887: TX: <CHECKPWD +1hvPcRfx7uLrp>
+1621937887: RX: <OK>
+1621937887: 
+********************************************
+           INICIANDO SESION
+********************************************
+1621937887: TX: <UUID 2d98f997-aca3-4b77-b58e-83803551cdaf>
+1621937887: RX: <REGISTERED>
+1621937887: COMMAND <find . -type f -newer .signature -print | awk -v pwd="`pwd`/.trazas-4" '{ if(index($0,pwd) != 1) print }' > /tmp/.asitmp>
+1621937887: COMMAND <cp ./client.? .trazas-4>
+1621937887: COMMAND <tar zcf save_file-78997168B .trazas-4 > /dev/null>
+1621937887: COMMAND <echo "\nopen u017633.ehu.es\nuser anonymous anonymous\npassive\ncd LAB2021/examen-4\nput save_file-78997168B 78997168B-25-5-12h18\n" | 	  ftp -n 2>&1 > /dev/null>
+1621937888: COMMAND <ipcs -m >> .trazas-4/alumno-78997168B 2>&1>
+
+---- Segmentos memoria compartida ----
+key        shmid      propietario perms      bytes      nattch     estado      
+0x00000000 65536      felix      600        16777216   2          dest         
+0x00000000 2          felix      600        16384      1          dest         
+0x00000000 131076     felix      600        524288     2          dest         
+0x00000000 196613     felix      600        1916928    2          dest         
+0x00000000 6          felix      600        4325376    2          dest         
+0x00000000 163847     felix      600        1916928    2          dest         
+0x00000000 65544      felix      600        16384      1          dest         
+0x00000000 9          felix      600        524288     2          dest         
+0x00000000 131082     felix      600        4194304    2          dest         
+0x00000000 11         felix      600        3964928    2          dest         
+0x00000000 65548      felix      600        1802240    1          dest         
+0x00000000 65549      felix      600        2129920    2          dest         
+0x00000000 196622     felix      600        2359296    2          dest         
+0x00000000 32783      felix      600        16777216   2          dest         
+0x00000000 131088     felix      600        2162688    2          dest         
+0x00000000 65553      felix      600        1982464    1          dest         
+0x78997168 196626     felix      666        1024       0                       
+0x00000000 131092     felix      600        16777216   2          dest         
+0x00000000 32790      felix      600        4194304    2          dest         
+0x00000000 23         felix      600        524288     2          dest         
+0x00000000 65563      felix      600        524288     2          dest         
+0x00000000 65564      felix      600        4194304    2          dest         
+0x00000000 65565      felix      600        3964928    2          dest         
+0x00000000 30         felix      600        524288     2          dest         
+0x00000000 65567      felix      600        16777216   2          dest         
+0x00000000 98336      felix      600        524288     2          dest         
+0x00000000 34         felix      600        3964928    2          dest         
+0x00000000 32804      felix      600        81920      2          dest         
+0x00000000 32805      felix      600        81920      2          dest         
+0x00000000 65575      felix      600        33554432   2          dest         
+0x00000000 131113     felix      600        4050944    2          dest         
+0x00000000 163885     felix      600        3964928    2          dest         
+0x00000000 163886     felix      600        1982464    2          dest         
+0x00000000 163887     felix      600        2359296    2          dest         
+0x00000000 98352      felix      600        524288     2          dest         
+0x00000000 163889     felix      600        2359296    2          dest         
+0x00000000 50         felix      600        69632      2          dest         
+0x00000000 51         felix      600        69632      2          dest         
+0x00000000 163892     felix      600        2359296    2          dest         
+0x00000000 163893     felix      600        2162688    2          dest         
+0x00000000 131126     felix      600        4050944    2          dest         
+0x00000000 131127     felix      600        1982464    1          dest         
+0x00000000 32824      felix      600        524288     2          dest         
+0x00000000 163900     felix      600        2162688    2          dest         
+0x00000000 32829      felix      600        524288     2          dest         
+0x00000000 32830      felix      600        4194304    2          dest         
+0x00000000 32831      felix      600        2162688    2          dest         
+0x00000000 163904     felix      600        2359296    2          dest         
+0x00000000 163905     felix      600        3964928    2          dest         
+0x00000000 163906     felix      600        2359296    2          dest         
+
+1621937888: 
+-------------------------------------------------------
+Existe YA un segmento de memoria compartida con clave 0x78997168
+-------------------------------------------------------
+1621937890: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 1.
+
+*************************************************
+
+
+1621937890: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-4/.n_cliente>
+1621937891: 
+-------------------------------------------------------
+==> Intentando conectar en 127.0.0.1:3010
+1621937891: ==> Conexión (5) correcta en  127.0.0.1:3010
+-------------------------------------------------------
+1621937891: 
+-------------------------------------------------------
+==> Esperando 3 segundos a recibir mensaje.
+
+-------------------------------------------------------
+1621937894: 
+------------------------------------------
+AGOTADA temporización de recepción de datos.
+------------------------------------------
+1621937894: 
+-------------------------------------------------------
+Recibida una respuesta no adecuada.
+
+-------------------------------------------------------
+1621937894: Cerrando socket (5)  con 127.0.0.1 por el MONITOR
+1621937895: 
+-------------------------------------------------------
+==> Intentando conectar en 127.0.0.1:3010
+1621937895: ==> Conexión (5) correcta en  127.0.0.1:3010
+-------------------------------------------------------
+1621937895: 
+-------------------------------------------------------
+==> Esperando 3 segundos a recibir mensaje.
+
+-------------------------------------------------------
+1621937898: 
+------------------------------------------
+AGOTADA temporización de recepción de datos.
+------------------------------------------
+1621937898: 
+-------------------------------------------------------
+Recibida una respuesta no adecuada.
+
+-------------------------------------------------------
+1621937898: Cerrando socket (5)  con 127.0.0.1 por el MONITOR
+1621937898: 
+[5m*************************************************
+:nok> No se ha realizado correctamente el ejercicio 1.
+
+*************************************************[0m
+1621937898: COMMAND <who >> .trazas-4/alumno-78997168B>
+felix    :0           2021-05-25 09:07 (:0)
+1621937899: COMMAND <who >> .trazas-4/alumno-78997168B>
+felix    :0           2021-05-25 09:07 (:0)
+1621937984: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 1.
+
+*************************************************
+
+
+1621937984: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-4/.n_cliente>
+1621937984: 
+-------------------------------------------------------
+==> Intentando conectar en 127.0.0.1:3010
+1621937984: ==> Conexión (5) correcta en  127.0.0.1:3010
+-------------------------------------------------------
+1621937984: 
+-------------------------------------------------------
+==> Esperando 3 segundos a recibir mensaje.
+
+-------------------------------------------------------
+1621937987: 
+------------------------------------------
+AGOTADA temporización de recepción de datos.
+------------------------------------------
+1621937987: 
+-------------------------------------------------------
+Recibida una respuesta no adecuada.
+
+-------------------------------------------------------
+1621937987: Cerrando socket (5)  con 127.0.0.1 por el MONITOR
+1621937988: 
+-------------------------------------------------------
+==> Intentando conectar en 127.0.0.1:3010
+1621937988: ==> Conexión (5) correcta en  127.0.0.1:3010
+-------------------------------------------------------
+1621937988: 
+-------------------------------------------------------
+==> Esperando 3 segundos a recibir mensaje.
+
+-------------------------------------------------------
+1621937991: 
+------------------------------------------
+AGOTADA temporización de recepción de datos.
+------------------------------------------
+1621937991: 
+-------------------------------------------------------
+Recibida una respuesta no adecuada.
+
+-------------------------------------------------------
+1621937991: Cerrando socket (5)  con 127.0.0.1 por el MONITOR
+1621937991: 
+[5m*************************************************
+:nok> No se ha realizado correctamente el ejercicio 1.
+
+*************************************************[0m
+1621937991: COMMAND <who >> .trazas-4/alumno-78997168B>
+felix    :0           2021-05-25 09:07 (:0)
+1621937992: COMMAND <who >> .trazas-4/alumno-78997168B>
+felix    :0           2021-05-25 09:07 (:0)

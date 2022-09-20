@@ -1,0 +1,68 @@
+NAME
+
+connect_MONITOR  — establish an internal connection to MONITOR application
+
+
+SYNOPSIS
+
+#include “client.h”
+
+int connect_MONITOR(char *dni);
+
+DESCRIPTION
+
+This function makes an internal connection to MONITOR application and prepares the environment to get some special services in order to check key values.
+
+The service must be initialized to a specific user indicated by dni. MONITOR application must be running when the function is called.
+
+RETURN VALUES:
+
+	-1: On error accessing to MONITOR interface
+	1: On success
+
+——————————————————————————————————————————
+
+NAME
+
+check_keys  —  to check a specific value related to a key
+
+SYNOPSIS
+
+#include “client.h”
+
+int check_keys(int key, int value)
+
+DESCRIPTION
+
+This function informs MONITOR about a specific value related to a key. You have a credit (a maximum number of attempts) to guess a key value, if you run out this credit this key will be blocked. To use this function, previously, you must have connected to MONITOR via connect_MONITOR call.
+
+RETURN VALUES:
+
+	-1: problems to communicate with MONITOR
+	1: Informative request to MONITOR processed 
+
+——————————————————————————————————————————
+
+NAME 
+
+do_child_work  — to work with pipes waiting for Hello messages and sending encrypted values to uncover the keys
+
+SYNOPSYS
+
+#include “client.h”
+
+int do_child_work(int fildes[2]);
+
+DESCRIPTION
+
+This function works with a previoulsy created pipe whose file descriptors are passed in a fildes array. It waits for a Wellcome message (“HELLO”) an after two seconds it writes an integer value associated with a key that users must use to get the actual value of the key. Before ending file descriptors will be closed. A previous connection to MONITOR must be stablished via connect_MONITOR call.
+
+Warning: The parameter fildes must be a pointer to the array of two descriptors generated via pipe() function.
+
+RETURN VALUES:
+
+	-1: problems with the pipe
+	0: problems with welcome message or initialization
+	1: on successful completion 
+
+————————————————————————————————————————

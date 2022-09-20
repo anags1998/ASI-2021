@@ -1,0 +1,2359 @@
+1623937310: COMMAND <cp ./examen8 /tmp/.examen8>
+1623937310: COMMAND <cp -f /tmp/.examen8 ./examen8>
+1623937310: COMMAND <uname -a >> .trazas-8/alumno-45916038B>
+Linux ana-VirtualBox 4.15.0-144-generic #148-Ubuntu SMP Sat May 8 02:33:43 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+1623937310: COMMAND <ifconfig 2>&1 >> .trazas-8/alumno-45916038B>
+1623937310: COMMAND <echo -n 'MACHINE-ID: ' >> .trazas-8/alumno-45916038B>
+MACHINE-ID: 1623937310: COMMAND <cat /etc/machine-id >> .trazas-8/alumno-45916038B>
+3ee4344e935d4984ab86063ac6ab8a46
+1623937310: 
+La máquina está ya identificada.
+1623937310: RX: <OK Accepted>
+1623937312: TX: <CHECKPWD GpfgwNs6a1VOFC>
+1623937313: RX: <NEW>
+1623937313: 
+***************************************************
+El usuario no tiene un password público registrado.
+Por favor, confirme el password para darlo de alta.
+[5mEl password debe recordarlo para futuras sesiones.[0m
+Utilice una secuencia de caracteres personal privados.
+En el servidor se guardará una versión encriptada.
+Si no está de acuerdo con el password que ha utilizado
+interrumpa el proceso y comience de nuevo el registro.
+Posteriormente será más complicado modificarlo. Tendrá.
+que ponerse en contacto con el administrador:
+                 armando.ferro@ehu.eus
+***************************************************
+1623937317: TX: <CREATEPWD GpfgwNs6a1VOFC>
+1623937317: [5m
+LOGIN: Registrado password público <GpfgwNs6a1VOFC>.[0m
+1623937317: RX: <DONE>
+1623937317: 
+********************************************
+           INICIANDO SESION
+********************************************
+1623937317: TX: <UUID 57206189-a595-4315-a2ca-430aed4a8e9a>
+1623937317: RX: <REGISTERED>
+1623937317: COMMAND <find . -type f -newer .signature -print | awk -v pwd="`pwd`/.trazas-8" '{ if(index($0,pwd) != 1) print }' > /tmp/.asitmp>
+1623937321: COMMAND <cp ./client.? .trazas-8>
+1623937321: COMMAND <tar zcf save_file-45916038B .trazas-8 > /dev/null>
+1623937321: COMMAND <echo "\nopen u017633.ehu.es\nuser anonymous anonymous\npassive\ncd LAB2021/examen-8\nput save_file-45916038B 45916038B-17-6-15h41\n" | 	  ftp -n 2>&1 > /dev/null>
+1623937336: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 1.
+
+*************************************************
+
+
+1623937336: COMMAND <ps u >> .trazas-8/alumno-45916038B>
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+ana       1967  0.0  0.0 212308  1812 tty2     Ssl+ 15:06   0:00 /usr/lib/gdm3/gdm-x-session --run-script env GNOME_SHELL_SESSION_MODE=ubuntu gnome-session --session=ubuntu
+ana       1969  2.3  4.6 614880 94636 tty2     Rl+  15:06   0:51 /usr/lib/xorg/Xorg vt2 -displayfd 3 -auth /run/user/1000/gdm/Xauthority -background none -noreset -keeptty -verbose 3
+ana       1980  0.0  0.2 634068  4112 tty2     Sl+  15:06   0:00 /usr/lib/gnome-session/gnome-session-binary --session=ubuntu
+ana       2160  8.3 15.3 3534420 313724 tty2   Rl+  15:06   2:57 /usr/bin/gnome-shell
+ana       2288  0.1  0.1 362020  3592 tty2     Sl   15:07   0:02 ibus-daemon --xim --panel disable
+ana       2306  0.0  0.0 281056  1880 tty2     Sl   15:07   0:00 /usr/lib/ibus/ibus-dconf
+ana       2308  0.0  0.3 344800  7260 tty2     Sl   15:07   0:00 /usr/lib/ibus/ibus-x11 --kill-daemon
+ana       2538  0.0  0.4 517964  8720 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-power
+ana       2542  0.0  0.1 349536  2612 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-print-notifications
+ana       2545  0.0  0.0 423428  1840 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-rfkill
+ana       2546  0.0  0.0 275948  1816 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-screensaver-proxy
+ana       2548  0.0  0.0 453204  2020 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-sharing
+ana       2556  0.0  0.0 378444  1040 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-smartcard
+ana       2558  0.0  0.0 335348  1832 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-sound
+ana       2565  0.0  0.4 495276  9020 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-xsettings
+ana       2580  0.0  0.4 429336  9752 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-wacom
+ana       2594  0.0  0.1 278524  2124 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-a11y-settings
+ana       2595  0.0  0.4 344360  8856 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-clipboard
+ana       2600  0.0  0.5 733352 10988 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-color
+ana       2605  0.0  0.2 470100  4304 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-datetime
+ana       2610  0.0  0.1 364832  2184 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-housekeeping
+ana       2619  0.0  0.4 498808  8976 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-keyboard
+ana       2623  0.0  0.5 1082512 10396 tty2    Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-media-keys
+ana       2629  0.0  0.0 278532  2032 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-mouse
+ana       2687  0.0  0.1 508976  3856 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-printer
+ana       2788  0.1  3.4 936352 70356 tty2     Sl+  15:07   0:03 nautilus-desktop
+ana       2790  0.0  0.1 271940  2968 tty2     Sl+  15:07   0:00 /usr/lib/gnome-disk-utility/gsd-disk-utility-notify
+ana       2795  0.3  7.2 1401532 147636 tty2   SLl+ 15:07   0:06 /usr/bin/gnome-software --gapplication-service
+ana       2910  0.0  0.1 205196  2512 tty2     Sl   15:07   0:00 /usr/lib/ibus/ibus-engine-simple
+ana       3485  0.0  0.5 645376 11888 tty2     Sl+  15:08   0:00 update-notifier
+ana       3715  0.0  0.4 804560  9412 tty2     Sl+  15:09   0:00 /usr/lib/deja-dup/deja-dup-monitor
+ana       3806  0.0  0.1  30132  2564 pts/0    Ss   15:09   0:00 bash
+ana       3983  0.0  0.1  30000  3444 pts/1    Ss   15:09   0:00 bash
+ana       4251 10.1 16.1 3885656 330256 tty2   Sl+  15:30   1:10 /usr/lib/firefox/firefox -new-window
+ana       4301  0.0  0.7 358436 15476 tty2     Sl+  15:31   0:00 /usr/lib/firefox/firefox -contentproc -parentBuildID 20210527174632 -prefsLen 1 -prefMapSize 238432 -appdir /usr/lib/firefox/browser 4251 true socket
+ana       4361  0.4  3.8 2637048 77624 tty2    Sl+  15:31   0:03 /usr/lib/firefox/firefox -contentproc -childID 1 -isForBrowser -prefsLen 123 -prefMapSize 238432 -parentBuildID 20210527174632 -appdir /usr/lib/firefox/browser 4251 true tab
+ana       4391  9.1 16.7 3134724 341920 tty2   Sl+  15:31   1:00 /usr/lib/firefox/firefox -contentproc -childID 2 -isForBrowser -prefsLen 227 -prefMapSize 238432 -parentBuildID 20210527174632 -appdir /usr/lib/firefox/browser 4251 true tab
+ana       4431  0.2  2.6 2610924 53824 tty2    Sl+  15:31   0:01 /usr/lib/firefox/firefox -contentproc -childID 3 -isForBrowser -prefsLen 5122 -prefMapSize 238432 -parentBuildID 20210527174632 -appdir /usr/lib/firefox/browser 4251 true tab
+ana       4510  0.0  1.8 2583748 37396 tty2    Sl+  15:31   0:00 /usr/lib/firefox/firefox -contentproc -childID 4 -isForBrowser -prefsLen 8372 -prefMapSize 238432 -parentBuildID 20210527174632 -appdir /usr/lib/firefox/browser 4251 true tab
+ana       4541  0.0  0.8 367228 17640 tty2     Sl+  15:32   0:00 /usr/lib/firefox/firefox -contentproc -parentBuildID 20210527174632 -prefsLen 8419 -prefMapSize 238432 -appdir /usr/lib/firefox/browser 4251 true rdd
+ana       4672  0.0  0.1  15192  2228 pts/0    S+   15:41   0:00 ./examen8
+ana       4704  0.0  0.0   4520   716 pts/1    S+   15:42   0:00 ./client
+ana       4705  0.0  0.0   4636   808 pts/0    S+   15:42   0:00 sh -c ps u >> .trazas-8/alumno-45916038B
+ana       4706  0.0  0.1  44564  3340 pts/0    R+   15:42   0:00 ps u
+1623937337: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-8/.n_cliente>
+1623937337: COMMAND <ipcrm -M 0x45916038 >> .trazas-8/alumno-45916038B>
+1623937337: 
+-------------------------------------------------------
+Borrando la memoria compartida <0x45916038L>
+-------------------------------------------------------
+1623937337: COMMAND <rm /tmp/fifo_rd >> .trazas-8/alumno-45916038B>
+1623937337: 
+-------------------------------------------------------
+Borrando dispositivo FIFO </tmp/fifo_rd>
+-------------------------------------------------------
+1623937337: COMMAND <rm /tmp/fifo_wr >> .trazas-8/alumno-45916038B>
+1623937337: 
+-------------------------------------------------------
+Borrando dispositivo FIFO </tmp/fifo_wr>
+-------------------------------------------------------
+1623937337: 
+-------------------------------------------------------
+Creando una cola FIFO: /tmp/fifo_rd.
+-------------------------------------------------------
+1623937337: 
+-------------------------------------------------------
+Creando una cola FIFO: /tmp/fifo_wr.
+-------------------------------------------------------
+1623937337: 
+-------------------------------------------------------
+Creada la memoria compartida <0x45916038L>
+-------------------------------------------------------
+1623937337: 
+-------------------------------------------------------
+Inicializando contadores de mensajes de KEEP ALIVE
+-------------------------------------------------------
+1623937337: 
+*************************************************
+:ok> CONTEXTO del ejercicio 1 preparado.
+*************************************************
+1623937337: COMMAND <who >> .trazas-8/alumno-45916038B>
+ana      :0           2021-06-17 15:06 (:0)
+1623937337: 
+-------------------------------------------------------
+Activando un servidor UDP en el puerto <12704>
+-------------------------------------------------------
+1623937337: 
+-------------------------------------------------------
+Activado servidor TCP en puerto 12704.
+-------------------------------------------------------
+1623937353: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 1.
+
+*************************************************
+
+
+1623937353: COMMAND <ps u >> .trazas-8/alumno-45916038B>
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+ana       1967  0.0  0.0 212308  1812 tty2     Ssl+ 15:06   0:00 /usr/lib/gdm3/gdm-x-session --run-script env GNOME_SHELL_SESSION_MODE=ubuntu gnome-session --session=ubuntu
+ana       1969  2.4  4.6 614880 94620 tty2     Rl+  15:06   0:51 /usr/lib/xorg/Xorg vt2 -displayfd 3 -auth /run/user/1000/gdm/Xauthority -background none -noreset -keeptty -verbose 3
+ana       1980  0.0  0.2 634068  4116 tty2     Sl+  15:06   0:00 /usr/lib/gnome-session/gnome-session-binary --session=ubuntu
+ana       2160  8.4 15.3 3534420 313088 tty2   Rl+  15:06   3:00 /usr/bin/gnome-shell
+ana       2288  0.1  0.1 362020  3596 tty2     Sl   15:07   0:02 ibus-daemon --xim --panel disable
+ana       2306  0.0  0.0 281056  1880 tty2     Sl   15:07   0:00 /usr/lib/ibus/ibus-dconf
+ana       2308  0.0  0.3 344800  7264 tty2     Sl   15:07   0:00 /usr/lib/ibus/ibus-x11 --kill-daemon
+ana       2538  0.0  0.4 517964  8724 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-power
+ana       2542  0.0  0.1 349536  2612 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-print-notifications
+ana       2545  0.0  0.0 423428  1844 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-rfkill
+ana       2546  0.0  0.0 275948  1816 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-screensaver-proxy
+ana       2548  0.0  0.0 453204  2024 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-sharing
+ana       2556  0.0  0.0 378444  1044 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-smartcard
+ana       2558  0.0  0.0 335348  1836 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-sound
+ana       2565  0.0  0.4 495276  9020 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-xsettings
+ana       2580  0.0  0.4 429336  9756 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-wacom
+ana       2594  0.0  0.1 278524  2124 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-a11y-settings
+ana       2595  0.0  0.4 344360  8856 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-clipboard
+ana       2600  0.0  0.5 733352 10988 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-color
+ana       2605  0.0  0.2 470100  4304 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-datetime
+ana       2610  0.0  0.1 364832  2184 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-housekeeping
+ana       2619  0.0  0.4 498808  8976 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-keyboard
+ana       2623  0.0  0.5 1082512 10396 tty2    Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-media-keys
+ana       2629  0.0  0.0 278532  2032 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-mouse
+ana       2687  0.0  0.1 508976  3856 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-printer
+ana       2788  0.1  3.4 936352 70356 tty2     Sl+  15:07   0:04 nautilus-desktop
+ana       2790  0.0  0.1 271940  2968 tty2     Sl+  15:07   0:00 /usr/lib/gnome-disk-utility/gsd-disk-utility-notify
+ana       2795  0.3  7.2 1401532 147636 tty2   SLl+ 15:07   0:06 /usr/bin/gnome-software --gapplication-service
+ana       2910  0.0  0.1 205196  2512 tty2     Sl   15:07   0:00 /usr/lib/ibus/ibus-engine-simple
+ana       3485  0.0  0.5 645376 11888 tty2     Sl+  15:08   0:00 update-notifier
+ana       3715  0.0  0.4 804560  9412 tty2     Sl+  15:09   0:00 /usr/lib/deja-dup/deja-dup-monitor
+ana       3806  0.0  0.1  30132  2564 pts/0    Ss   15:09   0:00 bash
+ana       3983  0.0  0.1  30144  3524 pts/1    Ss   15:09   0:00 bash
+ana       4251  9.9 16.0 3885656 328368 tty2   Sl+  15:30   1:10 /usr/lib/firefox/firefox -new-window
+ana       4301  0.0  0.7 358436 15476 tty2     Sl+  15:31   0:00 /usr/lib/firefox/firefox -contentproc -parentBuildID 20210527174632 -prefsLen 1 -prefMapSize 238432 -appdir /usr/lib/firefox/browser 4251 true socket
+ana       4361  0.4  3.7 2637048 77484 tty2    Sl+  15:31   0:03 /usr/lib/firefox/firefox -contentproc -childID 1 -isForBrowser -prefsLen 123 -prefMapSize 238432 -parentBuildID 20210527174632 -appdir /usr/lib/firefox/browser 4251 true tab
+ana       4391  8.9 16.6 3134724 340496 tty2   Sl+  15:31   1:00 /usr/lib/firefox/firefox -contentproc -childID 2 -isForBrowser -prefsLen 227 -prefMapSize 238432 -parentBuildID 20210527174632 -appdir /usr/lib/firefox/browser 4251 true tab
+ana       4431  0.2  2.6 2610924 53776 tty2    Sl+  15:31   0:01 /usr/lib/firefox/firefox -contentproc -childID 3 -isForBrowser -prefsLen 5122 -prefMapSize 238432 -parentBuildID 20210527174632 -appdir /usr/lib/firefox/browser 4251 true tab
+ana       4510  0.0  1.8 2583748 37388 tty2    Sl+  15:31   0:00 /usr/lib/firefox/firefox -contentproc -childID 4 -isForBrowser -prefsLen 8372 -prefMapSize 238432 -parentBuildID 20210527174632 -appdir /usr/lib/firefox/browser 4251 true tab
+ana       4541  0.0  0.8 367228 17640 tty2     Sl+  15:32   0:00 /usr/lib/firefox/firefox -contentproc -parentBuildID 20210527174632 -prefsLen 8419 -prefMapSize 238432 -appdir /usr/lib/firefox/browser 4251 true rdd
+ana       4672  0.0  0.1  47980  2296 pts/0    Sl+  15:41   0:00 ./examen8
+ana       4724  0.0  0.0   4520   856 pts/1    S+   15:42   0:00 ./client 4672
+ana       4725  0.0  0.0   4636   768 pts/0    S+   15:42   0:00 sh -c ps u >> .trazas-8/alumno-45916038B
+ana       4726  0.0  0.1  44564  3268 pts/0    R+   15:42   0:00 ps u
+1623937353: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-8/.n_cliente>
+1623937353: COMMAND <ipcrm -M 0x45916038 >> .trazas-8/alumno-45916038B>
+1623937353: 
+-------------------------------------------------------
+Borrando la memoria compartida <0x45916038L>
+-------------------------------------------------------
+1623937353: COMMAND <rm /tmp/fifo_rd >> .trazas-8/alumno-45916038B>
+1623937353: 
+-------------------------------------------------------
+Borrando dispositivo FIFO </tmp/fifo_rd>
+-------------------------------------------------------
+1623937353: COMMAND <rm /tmp/fifo_wr >> .trazas-8/alumno-45916038B>
+1623937353: 
+-------------------------------------------------------
+Error en la apertura del FIFO </tmp/fifo_wr>
+-------------------------------------------------------
+1623937353: 
+-------------------------------------------------------
+Borrando dispositivo FIFO </tmp/fifo_wr>
+-------------------------------------------------------
+1623937353: 
+-------------------------------------------------------
+Creando una cola FIFO: /tmp/fifo_rd.
+-------------------------------------------------------
+1623937353: 
+-------------------------------------------------------
+Creando una cola FIFO: /tmp/fifo_wr.
+-------------------------------------------------------
+1623937353: 
+-------------------------------------------------------
+Creada la memoria compartida <0x45916038L>
+-------------------------------------------------------
+1623937353: 
+-------------------------------------------------------
+Inicializando contadores de mensajes de KEEP ALIVE
+-------------------------------------------------------
+1623937353: 
+*************************************************
+:ok> CONTEXTO del ejercicio 1 preparado.
+*************************************************
+1623937353: COMMAND <who >> .trazas-8/alumno-45916038B>
+ana      :0           2021-06-17 15:06 (:0)
+1623937353: 
+-------------------------------------------------------
+Activando un servidor UDP en el puerto <12724>
+-------------------------------------------------------
+1623937353: 
+-------------------------------------------------------
+Activado servidor TCP en puerto 12724.
+-------------------------------------------------------
+1623937354: 
+-------------------------------------------------------
+Recibida una señal (10)
+-------------------------------------------------------
+1623937354: 
+-------------------------------------------------------
+Abierto el dispositivo FIFO </tmp/fifo_wr>
+-------------------------------------------------------
+1623937354: 
+-------------------------------------------------------
+Recibido 10 bytes del FIFO /tmp/fifo_wr
+-------------------------------------------------------
+1623937354: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <1> es <568>.
+********************************************[0m
+1623937354: 
+-------------------------------------------------------
+Abierto el dispositivo FIFO </tmp/fifo_rd>
+-------------------------------------------------------
+1623937354: 
+-------------------------------------------------------
+Enviando 6 bytes al FIFO /tmp/fifo_rd
+-------------------------------------------------------
+1623937354: 
+-------------------------------------------------------
+Recibida conexión <127.0.0.1> en servidor TCP en el puerto <12724>
+-------------------------------------------------------
+1623937354: 
+-------------------------------------------------------
+REcibido via TCP 10 bytes del cliente 127.0.0.1
+-------------------------------------------------------
+1623937354: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <4> es <651>.
+********************************************[0m
+1623937354: 
+-------------------------------------------------------
+Enviando via TCP 6 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623937354: 
+-------------------------------------------------------
+Recibido via UDP 10 bytes del cliente 127.0.0.1
+-------------------------------------------------------
+1623937354: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <7> es <538>.
+********************************************[0m
+1623937354: 
+-------------------------------------------------------
+Enviando via UDP 6 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623937354: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-8/.n_cliente>
+1623937354: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <10> es <181>.
+********************************************[0m
+1623937354: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 4724.
+-------------------------------------------------------
+1623937354: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 4724.
+-------------------------------------------------------
+1623937356: 
+-------------------------------------------------------
+Enviando SEÑAL (10) al proceso 4724.
+-------------------------------------------------------
+1623937356: 
+-------------------------------------------------------
+Enviando SEÑAL (10) al proceso 4724.
+-------------------------------------------------------
+1623937357: 
+-------------------------------------------------------
+Enviando 3 bytes al FIFO /tmp/fifo_rd
+-------------------------------------------------------
+1623937357: 
+-------------------------------------------------------
+Enviando via TCP 3 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623937357: 
+-------------------------------------------------------
+Recibido 4 bytes del FIFO /tmp/fifo_wr
+-------------------------------------------------------
+1623937357: 
+-------------------------------------------------------
+Enviando via UDP 3 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623937357: 
+-------------------------------------------------------
+REcibido via TCP 4 bytes del cliente 127.0.0.1
+-------------------------------------------------------
+1623937357: 
+-------------------------------------------------------
+Recibido via UDP 4 bytes del cliente 127.0.0.1
+-------------------------------------------------------
+1623937357: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 4724.
+-------------------------------------------------------
+1623937357: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 4724.
+-------------------------------------------------------
+1623937359: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 4724.
+-------------------------------------------------------
+1623937359: 
+-------------------------------------------------------
+Enviando SEÑAL (10) al proceso 4724.
+-------------------------------------------------------
+1623937360: 
+-------------------------------------------------------
+Enviando 3 bytes al FIFO /tmp/fifo_rd
+-------------------------------------------------------
+1623937360: 
+-------------------------------------------------------
+Enviando via TCP 3 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623937360: 
+-------------------------------------------------------
+Recibido 4 bytes del FIFO /tmp/fifo_wr
+-------------------------------------------------------
+1623937360: 
+-------------------------------------------------------
+Enviando via UDP 3 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623937360: 
+-------------------------------------------------------
+REcibido via TCP 4 bytes del cliente 127.0.0.1
+-------------------------------------------------------
+1623937360: 
+-------------------------------------------------------
+Recibido via UDP 4 bytes del cliente 127.0.0.1
+-------------------------------------------------------
+1623937360: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 4724.
+-------------------------------------------------------
+1623937361: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 4724.
+-------------------------------------------------------
+1623937362: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 4724.
+-------------------------------------------------------
+1623937363: 
+-------------------------------------------------------
+Enviando 3 bytes al FIFO /tmp/fifo_rd
+-------------------------------------------------------
+1623937363: 
+-------------------------------------------------------
+Enviando via UDP 3 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623937363: 
+-------------------------------------------------------
+Enviando via TCP 3 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623937363: 
+-------------------------------------------------------
+Recibido 4 bytes del FIFO /tmp/fifo_wr
+-------------------------------------------------------
+1623937363: 
+-------------------------------------------------------
+REcibido via TCP 4 bytes del cliente 127.0.0.1
+-------------------------------------------------------
+1623937363: 
+-------------------------------------------------------
+Recibido via UDP 4 bytes del cliente 127.0.0.1
+-------------------------------------------------------
+1623937363: 
+-------------------------------------------------------
+Contador 3 de KA no coincide 0.
+-------------------------------------------------------
+1623937366: 
+-------------------------------------------------------
+Enviando via UDP 10 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623937366: 
+-------------------------------------------------------
+Enviando via TCP 11 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623937366: 
+-------------------------------------------------------
+Enviando 11 bytes al FIFO /tmp/fifo_rd
+-------------------------------------------------------
+1623937366: 
+-------------------------------------------------------
+Recibido 9 bytes del FIFO /tmp/fifo_wr
+-------------------------------------------------------
+1623937366: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <2> es <141>.
+********************************************[0m
+1623937366: 
+-------------------------------------------------------
+Recibido via UDP 8 bytes del cliente 127.0.0.1
+-------------------------------------------------------
+1623937366: 
+-------------------------------------------------------
+REcibido via TCP 9 bytes del cliente 127.0.0.1
+-------------------------------------------------------
+1623937366: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <5> es <460>.
+********************************************[0m
+1623937366: 
+-------------------------------------------------------
+Enviando via TCP 6 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623937366: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <8> es <31>.
+********************************************[0m
+1623937366: 
+-------------------------------------------------------
+Enviando via UDP 6 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623937366: 
+-------------------------------------------------------
+Enviando 6 bytes al FIFO /tmp/fifo_rd
+-------------------------------------------------------
+1623937367: 
+-------------------------------------------------------
+Enviando via UDP 3 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623937367: 
+-------------------------------------------------------
+Enviando 3 bytes al FIFO /tmp/fifo_rd
+-------------------------------------------------------
+1623937367: 
+-------------------------------------------------------
+Enviando via TCP 3 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623937367: 
+-------------------------------------------------------
+Recibido via UDP 4 bytes del cliente 127.0.0.1
+-------------------------------------------------------
+1623937367: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <9> es <640>.
+********************************************[0m
+1623937367: 
+-------------------------------------------------------
+REcibido via TCP 4 bytes del cliente 127.0.0.1
+-------------------------------------------------------
+1623937367: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <6> es <961>.
+********************************************[0m
+1623937367: 
+-------------------------------------------------------
+Recibido 4 bytes del FIFO /tmp/fifo_wr
+-------------------------------------------------------
+1623937367: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <3> es <990>.
+********************************************[0m
+1623937370: 
+-------------------------------------------------------
+Enviando via UDP 3 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623937370: 
+-------------------------------------------------------
+Enviando 3 bytes al FIFO /tmp/fifo_rd
+-------------------------------------------------------
+1623937370: 
+-------------------------------------------------------
+Recibido 4 bytes del FIFO /tmp/fifo_wr
+-------------------------------------------------------
+1623937370: 
+-------------------------------------------------------
+Recibido via UDP 4 bytes del cliente 127.0.0.1
+-------------------------------------------------------
+1623937371: 
+-------------------------------------------------------
+Enviando via TCP 5 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623937371: 
+-------------------------------------------------------
+REcibido via TCP 4 bytes del cliente 127.0.0.1
+-------------------------------------------------------
+1623937371: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <14> es <929>.
+********************************************[0m
+1623937374: 
+-------------------------------------------------------
+Enviando via UDP 5 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623937374: 
+-------------------------------------------------------
+Enviando 5 bytes al FIFO /tmp/fifo_rd
+-------------------------------------------------------
+1623937374: 
+-------------------------------------------------------
+Recibido 4 bytes del FIFO /tmp/fifo_wr
+-------------------------------------------------------
+1623937374: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <13> es <612>.
+********************************************[0m
+1623937374: 
+-------------------------------------------------------
+Recibido via UDP 4 bytes del cliente 127.0.0.1
+-------------------------------------------------------
+1623937374: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <15> es <274>.
+********************************************[0m
+1623937484: 
+-------------------------------------------------------
+Recibida una señal (10)
+-------------------------------------------------------
+1623937485: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 4724.
+-------------------------------------------------------
+1623937485: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 4724.
+-------------------------------------------------------
+1623937487: 
+-------------------------------------------------------
+Enviando SEÑAL (10) al proceso 4724.
+-------------------------------------------------------
+1623937487: 
+-------------------------------------------------------
+Enviando SEÑAL (10) al proceso 4724.
+-------------------------------------------------------
+1623937488: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 4724.
+-------------------------------------------------------
+1623937488: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 4724.
+-------------------------------------------------------
+1623937490: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 4724.
+-------------------------------------------------------
+1623937490: 
+-------------------------------------------------------
+Enviando SEÑAL (10) al proceso 4724.
+-------------------------------------------------------
+1623937491: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 4724.
+-------------------------------------------------------
+1623937492: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 4724.
+-------------------------------------------------------
+1623937493: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 4724.
+-------------------------------------------------------
+1623937494: 
+-------------------------------------------------------
+Contador 3 de KA no coincide 0.
+-------------------------------------------------------
+1623937529: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 2.
+
+*************************************************
+
+
+1623937529: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-8/.n_cliente>
+1623937529: 
+-------------------------------------------------------
+Número de procesos cliente (6) inadecuado. Debe ser (4)
+-------------------------------------------------------
+1623937529: 
+*************************************************
+:ok> CONTEXTO del ejercicio 2 preparado.
+*************************************************
+1623937529: COMMAND <who >> .trazas-8/alumno-45916038B>
+ana      :0           2021-06-17 15:06 (:0)
+1623937589: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 1.
+
+*************************************************
+
+
+1623937589: COMMAND <ps u >> .trazas-8/alumno-45916038B>
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+ana       1967  0.0  0.0 212308  1812 tty2     Ssl+ 15:06   0:00 /usr/lib/gdm3/gdm-x-session --run-script env GNOME_SHELL_SESSION_MODE=ubuntu gnome-session --session=ubuntu
+ana       1969  2.5  4.6 614880 94620 tty2     Rl+  15:06   1:01 /usr/lib/xorg/Xorg vt2 -displayfd 3 -auth /run/user/1000/gdm/Xauthority -background none -noreset -keeptty -verbose 3
+ana       1980  0.0  0.2 634068  4104 tty2     Sl+  15:06   0:00 /usr/lib/gnome-session/gnome-session-binary --session=ubuntu
+ana       2160  8.8 15.2 3534420 310964 tty2   Rl+  15:06   3:29 /usr/bin/gnome-shell
+ana       2288  0.1  0.1 362020  3596 tty2     Sl   15:07   0:02 ibus-daemon --xim --panel disable
+ana       2306  0.0  0.0 281056  1880 tty2     Sl   15:07   0:00 /usr/lib/ibus/ibus-dconf
+ana       2308  0.0  0.3 344800  7264 tty2     Sl   15:07   0:00 /usr/lib/ibus/ibus-x11 --kill-daemon
+ana       2538  0.0  0.4 517964  8724 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-power
+ana       2542  0.0  0.1 349536  2612 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-print-notifications
+ana       2545  0.0  0.0 423428  1844 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-rfkill
+ana       2546  0.0  0.0 275948  1816 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-screensaver-proxy
+ana       2548  0.0  0.0 453204  2024 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-sharing
+ana       2556  0.0  0.0 378444  1044 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-smartcard
+ana       2558  0.0  0.0 335348  1780 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-sound
+ana       2565  0.0  0.4 495276  8396 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-xsettings
+ana       2580  0.0  0.4 429336  9288 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-wacom
+ana       2594  0.0  0.0 278524  2036 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-a11y-settings
+ana       2595  0.0  0.4 344360  8856 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-clipboard
+ana       2600  0.0  0.5 733352 10992 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-color
+ana       2605  0.0  0.2 470100  4304 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-datetime
+ana       2610  0.0  0.1 364832  2184 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-housekeeping
+ana       2619  0.0  0.4 498808  8976 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-keyboard
+ana       2623  0.0  0.5 1082512 10396 tty2    Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-media-keys
+ana       2629  0.0  0.0 278532  2032 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-mouse
+ana       2687  0.0  0.1 508976  3856 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-printer
+ana       2788  0.1  3.4 936352 70356 tty2     Sl+  15:07   0:04 nautilus-desktop
+ana       2790  0.0  0.1 271940  2968 tty2     Sl+  15:07   0:00 /usr/lib/gnome-disk-utility/gsd-disk-utility-notify
+ana       2795  0.2  7.2 1401532 147636 tty2   SLl+ 15:07   0:06 /usr/bin/gnome-software --gapplication-service
+ana       2910  0.0  0.1 205196  2512 tty2     Sl   15:07   0:00 /usr/lib/ibus/ibus-engine-simple
+ana       3485  0.0  0.5 645376 11888 tty2     Sl+  15:08   0:00 update-notifier
+ana       3715  0.0  0.4 804560  9412 tty2     Sl+  15:09   0:00 /usr/lib/deja-dup/deja-dup-monitor
+ana       3806  0.0  0.1  30132  2564 pts/0    Ss   15:09   0:00 bash
+ana       3983  0.0  0.1  30144  3828 pts/1    Ss+  15:09   0:00 bash
+ana       4251  7.7 14.4 3883656 295384 tty2   Sl+  15:30   1:13 /usr/lib/firefox/firefox -new-window
+ana       4301  0.0  0.7 358436 15472 tty2     Sl+  15:31   0:00 /usr/lib/firefox/firefox -contentproc -parentBuildID 20210527174632 -prefsLen 1 -prefMapSize 238432 -appdir /usr/lib/firefox/browser 4251 true socket
+ana       4361  0.3  3.8 2637048 78668 tty2    Sl+  15:31   0:03 /usr/lib/firefox/firefox -contentproc -childID 1 -isForBrowser -prefsLen 123 -prefMapSize 238432 -parentBuildID 20210527174632 -appdir /usr/lib/firefox/browser 4251 true tab
+ana       4391  7.1 15.4 3131652 315880 tty2   Sl+  15:31   1:05 /usr/lib/firefox/firefox -contentproc -childID 2 -isForBrowser -prefsLen 227 -prefMapSize 238432 -parentBuildID 20210527174632 -appdir /usr/lib/firefox/browser 4251 true tab
+ana       4431  0.1  2.6 2610924 53740 tty2    Sl+  15:31   0:01 /usr/lib/firefox/firefox -contentproc -childID 3 -isForBrowser -prefsLen 5122 -prefMapSize 238432 -parentBuildID 20210527174632 -appdir /usr/lib/firefox/browser 4251 true tab
+ana       4510  0.0  1.8 2583748 37384 tty2    Sl+  15:31   0:00 /usr/lib/firefox/firefox -contentproc -childID 4 -isForBrowser -prefsLen 8372 -prefMapSize 238432 -parentBuildID 20210527174632 -appdir /usr/lib/firefox/browser 4251 true tab
+ana       4541  0.0  0.8 367228 17636 tty2     Sl+  15:32   0:00 /usr/lib/firefox/firefox -contentproc -parentBuildID 20210527174632 -prefsLen 8419 -prefMapSize 238432 -appdir /usr/lib/firefox/browser 4251 true rdd
+ana       4672  0.0  0.1 367496  2396 pts/0    Sl+  15:41   0:00 ./examen8
+ana       4743  0.0  0.0   4524    80 pts/1    S    15:42   0:00 ./client 4672
+ana       4744  0.0  0.0   6644  1440 pts/1    S    15:42   0:00 ./client 4672
+ana       4745  0.0  0.0   6644  1460 pts/1    S    15:42   0:00 ./client 4672
+ana       4818  0.0  0.0   4636   820 pts/0    S+   15:46   0:00 sh -c ps u >> .trazas-8/alumno-45916038B
+ana       4819  0.0  0.1  44564  3332 pts/0    R+   15:46   0:00 ps u
+1623937589: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-8/.n_cliente>
+1623937589: 
+-------------------------------------------------------
+Número de procesos cliente (3) inadecuado. Debe ser (1)
+-------------------------------------------------------
+1623937589: 
+[5m*************************************************
+Problemas en la inicialización del ejercicio 1.
+
+*************************************************[0m
+1623937589: COMMAND <who >> .trazas-8/alumno-45916038B>
+ana      :0           2021-06-17 15:06 (:0)
+1623937595: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 1.
+
+*************************************************
+
+
+1623937595: COMMAND <ps u >> .trazas-8/alumno-45916038B>
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+ana       1967  0.0  0.0 212308  1812 tty2     Ssl+ 15:06   0:00 /usr/lib/gdm3/gdm-x-session --run-script env GNOME_SHELL_SESSION_MODE=ubuntu gnome-session --session=ubuntu
+ana       1969  2.5  4.6 614880 94620 tty2     Rl+  15:06   1:01 /usr/lib/xorg/Xorg vt2 -displayfd 3 -auth /run/user/1000/gdm/Xauthority -background none -noreset -keeptty -verbose 3
+ana       1980  0.0  0.2 634068  4104 tty2     Sl+  15:06   0:00 /usr/lib/gnome-session/gnome-session-binary --session=ubuntu
+ana       2160  8.8 15.2 3534420 311020 tty2   Rl+  15:06   3:31 /usr/bin/gnome-shell
+ana       2288  0.1  0.1 362020  3596 tty2     Sl   15:07   0:02 ibus-daemon --xim --panel disable
+ana       2306  0.0  0.0 281056  1880 tty2     Sl   15:07   0:00 /usr/lib/ibus/ibus-dconf
+ana       2308  0.0  0.3 344800  7264 tty2     Sl   15:07   0:00 /usr/lib/ibus/ibus-x11 --kill-daemon
+ana       2538  0.0  0.4 517964  8724 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-power
+ana       2542  0.0  0.1 349536  2612 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-print-notifications
+ana       2545  0.0  0.0 423428  1844 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-rfkill
+ana       2546  0.0  0.0 275948  1816 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-screensaver-proxy
+ana       2548  0.0  0.0 453204  2024 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-sharing
+ana       2556  0.0  0.0 378444  1044 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-smartcard
+ana       2558  0.0  0.0 335348  1780 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-sound
+ana       2565  0.0  0.4 495276  8396 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-xsettings
+ana       2580  0.0  0.4 429336  9288 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-wacom
+ana       2594  0.0  0.0 278524  2036 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-a11y-settings
+ana       2595  0.0  0.4 344360  8856 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-clipboard
+ana       2600  0.0  0.5 733352 10992 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-color
+ana       2605  0.0  0.2 470100  4304 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-datetime
+ana       2610  0.0  0.1 364832  2184 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-housekeeping
+ana       2619  0.0  0.4 498808  8976 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-keyboard
+ana       2623  0.0  0.5 1082512 10396 tty2    Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-media-keys
+ana       2629  0.0  0.0 278532  2032 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-mouse
+ana       2687  0.0  0.1 508976  3856 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-printer
+ana       2788  0.1  3.4 936352 70356 tty2     Sl+  15:07   0:04 nautilus-desktop
+ana       2790  0.0  0.1 271940  2968 tty2     Sl+  15:07   0:00 /usr/lib/gnome-disk-utility/gsd-disk-utility-notify
+ana       2795  0.2  7.2 1401532 147636 tty2   SLl+ 15:07   0:06 /usr/bin/gnome-software --gapplication-service
+ana       2910  0.0  0.1 205196  2512 tty2     Sl   15:07   0:00 /usr/lib/ibus/ibus-engine-simple
+ana       3485  0.0  0.5 645376 11888 tty2     Sl+  15:08   0:00 update-notifier
+ana       3715  0.0  0.4 804560  9412 tty2     Sl+  15:09   0:00 /usr/lib/deja-dup/deja-dup-monitor
+ana       3806  0.0  0.1  30132  2564 pts/0    Ss   15:09   0:00 bash
+ana       3983  0.0  0.1  30144  3828 pts/1    Ss   15:09   0:00 bash
+ana       4251  7.7 14.4 3883656 295020 tty2   Sl+  15:30   1:13 /usr/lib/firefox/firefox -new-window
+ana       4301  0.0  0.7 358436 15472 tty2     Sl+  15:31   0:00 /usr/lib/firefox/firefox -contentproc -parentBuildID 20210527174632 -prefsLen 1 -prefMapSize 238432 -appdir /usr/lib/firefox/browser 4251 true socket
+ana       4361  0.3  3.8 2637048 78668 tty2    Sl+  15:31   0:03 /usr/lib/firefox/firefox -contentproc -childID 1 -isForBrowser -prefsLen 123 -prefMapSize 238432 -parentBuildID 20210527174632 -appdir /usr/lib/firefox/browser 4251 true tab
+ana       4391  7.1 15.4 3131652 315880 tty2   Sl+  15:31   1:05 /usr/lib/firefox/firefox -contentproc -childID 2 -isForBrowser -prefsLen 227 -prefMapSize 238432 -parentBuildID 20210527174632 -appdir /usr/lib/firefox/browser 4251 true tab
+ana       4431  0.1  2.6 2610924 53740 tty2    Sl+  15:31   0:01 /usr/lib/firefox/firefox -contentproc -childID 3 -isForBrowser -prefsLen 5122 -prefMapSize 238432 -parentBuildID 20210527174632 -appdir /usr/lib/firefox/browser 4251 true tab
+ana       4510  0.0  1.8 2583748 37384 tty2    Sl+  15:31   0:00 /usr/lib/firefox/firefox -contentproc -childID 4 -isForBrowser -prefsLen 8372 -prefMapSize 238432 -parentBuildID 20210527174632 -appdir /usr/lib/firefox/browser 4251 true tab
+ana       4541  0.0  0.8 367228 17636 tty2     Sl+  15:32   0:00 /usr/lib/firefox/firefox -contentproc -parentBuildID 20210527174632 -prefsLen 8419 -prefMapSize 238432 -appdir /usr/lib/firefox/browser 4251 true rdd
+ana       4672  0.0  0.1 367496  2396 pts/0    Sl+  15:41   0:00 ./examen8
+ana       4743  0.0  0.0   4524    80 pts/1    S    15:42   0:00 ./client 4672
+ana       4744  0.0  0.0   6644  1440 pts/1    S    15:42   0:00 ./client 4672
+ana       4745  0.0  0.0   6644  1460 pts/1    S    15:42   0:00 ./client 4672
+ana       4826  0.0  0.0   4520   744 pts/1    S+   15:46   0:00 ./client 4672
+ana       4827  0.0  0.0   4636   808 pts/0    S+   15:46   0:00 sh -c ps u >> .trazas-8/alumno-45916038B
+ana       4828  0.0  0.1  44564  3268 pts/0    R+   15:46   0:00 ps u
+1623937595: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-8/.n_cliente>
+1623937595: 
+-------------------------------------------------------
+Número de procesos cliente (4) inadecuado. Debe ser (1)
+-------------------------------------------------------
+1623937595: 
+[5m*************************************************
+Problemas en la inicialización del ejercicio 1.
+
+*************************************************[0m
+1623937595: COMMAND <who >> .trazas-8/alumno-45916038B>
+ana      :0           2021-06-17 15:06 (:0)
+1623937597: 
+-------------------------------------------------------
+Recibida una señal (10)
+-------------------------------------------------------
+1623937598: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 4743.
+-------------------------------------------------------
+1623937598: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 4743.
+-------------------------------------------------------
+1623937600: 
+-------------------------------------------------------
+Enviando SEÑAL (10) al proceso 4743.
+-------------------------------------------------------
+1623937600: 
+-------------------------------------------------------
+Enviando SEÑAL (10) al proceso 4743.
+-------------------------------------------------------
+1623937601: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 4743.
+-------------------------------------------------------
+1623937601: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 4743.
+-------------------------------------------------------
+1623937603: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 4743.
+-------------------------------------------------------
+1623937603: 
+-------------------------------------------------------
+Enviando SEÑAL (10) al proceso 4743.
+-------------------------------------------------------
+1623937604: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 4743.
+-------------------------------------------------------
+1623937605: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 4743.
+-------------------------------------------------------
+1623937606: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 4743.
+-------------------------------------------------------
+1623937607: 
+-------------------------------------------------------
+Contador 3 de KA no coincide 0.
+-------------------------------------------------------
+1623937619: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 2.
+
+*************************************************
+
+
+1623937619: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-8/.n_cliente>
+1623937619: 
+-------------------------------------------------------
+Número de procesos cliente (5) inadecuado. Debe ser (4)
+-------------------------------------------------------
+1623937619: 
+*************************************************
+:ok> CONTEXTO del ejercicio 2 preparado.
+*************************************************
+1623937619: COMMAND <who >> .trazas-8/alumno-45916038B>
+ana      :0           2021-06-17 15:06 (:0)
+1623937621: COMMAND <find . -type f -newer .signature -print | awk -v pwd="`pwd`/.trazas-8" '{ if(index($0,pwd) != 1) print }' > /tmp/.asitmp>
+1623937621: COMMAND <cp ./client.? .trazas-8>
+1623937621: COMMAND <tar zcf save_file-45916038B .trazas-8 > /dev/null>
+1623937622: COMMAND <echo "\nopen u017633.ehu.es\nuser anonymous anonymous\npassive\ncd LAB2021/examen-8\nput save_file-45916038B 45916038B-17-6-15h41\n" | 	  ftp -n 2>&1 > /dev/null>
+1623937622: INTENTO DE CONEXION DIA:17 MES:6 HORA:15:47m.
+1623937668: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 2.
+
+*************************************************
+
+
+1623937668: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-8/.n_cliente>
+1623937668: 
+-------------------------------------------------------
+Número de procesos cliente (5) inadecuado. Debe ser (4)
+-------------------------------------------------------
+1623937668: 
+*************************************************
+:ok> CONTEXTO del ejercicio 2 preparado.
+*************************************************
+1623937668: COMMAND <who >> .trazas-8/alumno-45916038B>
+ana      :0           2021-06-17 15:06 (:0)
+1623937692: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 1.
+
+*************************************************
+
+
+1623937692: COMMAND <ps u >> .trazas-8/alumno-45916038B>
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+ana       1967  0.0  0.0 212308  1812 tty2     Ssl+ 15:06   0:00 /usr/lib/gdm3/gdm-x-session --run-script env GNOME_SHELL_SESSION_MODE=ubuntu gnome-session --session=ubuntu
+ana       1969  2.6  4.6 614880 94620 tty2     Rl+  15:06   1:04 /usr/lib/xorg/Xorg vt2 -displayfd 3 -auth /run/user/1000/gdm/Xauthority -background none -noreset -keeptty -verbose 3
+ana       1980  0.0  0.2 634068  4104 tty2     Sl+  15:06   0:00 /usr/lib/gnome-session/gnome-session-binary --session=ubuntu
+ana       2160  8.8 15.2 3534420 311308 tty2   Sl+  15:06   3:39 /usr/bin/gnome-shell
+ana       2288  0.1  0.1 362020  3596 tty2     Sl   15:07   0:02 ibus-daemon --xim --panel disable
+ana       2306  0.0  0.0 281056  1880 tty2     Sl   15:07   0:00 /usr/lib/ibus/ibus-dconf
+ana       2308  0.0  0.3 344800  7264 tty2     Sl   15:07   0:00 /usr/lib/ibus/ibus-x11 --kill-daemon
+ana       2538  0.0  0.4 517964  8724 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-power
+ana       2542  0.0  0.1 349536  2612 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-print-notifications
+ana       2545  0.0  0.0 423428  1844 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-rfkill
+ana       2546  0.0  0.0 275948  1816 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-screensaver-proxy
+ana       2548  0.0  0.0 453204  2024 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-sharing
+ana       2556  0.0  0.0 378444  1044 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-smartcard
+ana       2558  0.0  0.0 335348  1780 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-sound
+ana       2565  0.0  0.4 495276  8396 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-xsettings
+ana       2580  0.0  0.4 429336  9288 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-wacom
+ana       2594  0.0  0.0 278524  2036 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-a11y-settings
+ana       2595  0.0  0.4 344360  8856 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-clipboard
+ana       2600  0.0  0.5 733352 10992 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-color
+ana       2605  0.0  0.2 470100  4304 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-datetime
+ana       2610  0.0  0.1 364832  2184 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-housekeeping
+ana       2619  0.0  0.4 498808  8976 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-keyboard
+ana       2623  0.0  0.5 1082512 10396 tty2    Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-media-keys
+ana       2629  0.0  0.0 278532  2032 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-mouse
+ana       2687  0.0  0.1 508976  3856 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-printer
+ana       2788  0.1  3.4 936352 70356 tty2     Sl+  15:07   0:04 nautilus-desktop
+ana       2790  0.0  0.1 271940  2968 tty2     Sl+  15:07   0:00 /usr/lib/gnome-disk-utility/gsd-disk-utility-notify
+ana       2795  0.2  7.2 1401532 147636 tty2   SLl+ 15:07   0:06 /usr/bin/gnome-software --gapplication-service
+ana       2910  0.0  0.1 205196  2512 tty2     Sl   15:07   0:00 /usr/lib/ibus/ibus-engine-simple
+ana       3485  0.0  0.5 645376 11888 tty2     Sl+  15:08   0:00 update-notifier
+ana       3715  0.0  0.4 804560  9412 tty2     Sl+  15:09   0:00 /usr/lib/deja-dup/deja-dup-monitor
+ana       3806  0.0  0.1  30132  2564 pts/0    Ss   15:09   0:00 bash
+ana       3983  0.0  0.1  30144  3828 pts/1    Ss   15:09   0:00 bash
+ana       4251  7.0 14.4 3883656 294196 tty2   Sl+  15:30   1:14 /usr/lib/firefox/firefox -new-window
+ana       4301  0.0  0.7 358436 15472 tty2     Sl+  15:31   0:00 /usr/lib/firefox/firefox -contentproc -parentBuildID 20210527174632 -prefsLen 1 -prefMapSize 238432 -appdir /usr/lib/firefox/browser 4251 true socket
+ana       4361  0.3  3.8 2637048 78668 tty2    Sl+  15:31   0:03 /usr/lib/firefox/firefox -contentproc -childID 1 -isForBrowser -prefsLen 123 -prefMapSize 238432 -parentBuildID 20210527174632 -appdir /usr/lib/firefox/browser 4251 true tab
+ana       4391  6.7 15.4 3131652 315480 tty2   Sl+  15:31   1:08 /usr/lib/firefox/firefox -contentproc -childID 2 -isForBrowser -prefsLen 227 -prefMapSize 238432 -parentBuildID 20210527174632 -appdir /usr/lib/firefox/browser 4251 true tab
+ana       4431  0.1  2.6 2610924 53740 tty2    Sl+  15:31   0:01 /usr/lib/firefox/firefox -contentproc -childID 3 -isForBrowser -prefsLen 5122 -prefMapSize 238432 -parentBuildID 20210527174632 -appdir /usr/lib/firefox/browser 4251 true tab
+ana       4510  0.0  1.8 2583748 37384 tty2    Sl+  15:31   0:00 /usr/lib/firefox/firefox -contentproc -childID 4 -isForBrowser -prefsLen 8372 -prefMapSize 238432 -parentBuildID 20210527174632 -appdir /usr/lib/firefox/browser 4251 true tab
+ana       4541  0.0  0.8 367228 17636 tty2     Sl+  15:32   0:00 /usr/lib/firefox/firefox -contentproc -parentBuildID 20210527174632 -prefsLen 8419 -prefMapSize 238432 -appdir /usr/lib/firefox/browser 4251 true rdd
+ana       4672  0.0  0.1 367496  2396 pts/0    Sl+  15:41   0:00 ./examen8
+ana       4876  0.0  0.0   4520   744 pts/1    S+   15:48   0:00 ./client 4672
+ana       4877  0.0  0.0   4636   848 pts/0    S+   15:48   0:00 sh -c ps u >> .trazas-8/alumno-45916038B
+ana       4878  0.0  0.1  44564  3408 pts/0    R+   15:48   0:00 ps u
+1623937692: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-8/.n_cliente>
+1623937693: COMMAND <ipcrm -M 0x45916038 >> .trazas-8/alumno-45916038B>
+1623937693: 
+-------------------------------------------------------
+Borrando la memoria compartida <0x45916038L>
+-------------------------------------------------------
+1623937693: COMMAND <rm /tmp/fifo_rd >> .trazas-8/alumno-45916038B>
+1623937693: 
+-------------------------------------------------------
+Borrando dispositivo FIFO </tmp/fifo_rd>
+-------------------------------------------------------
+1623937693: COMMAND <rm /tmp/fifo_wr >> .trazas-8/alumno-45916038B>
+1623937693: 
+-------------------------------------------------------
+Borrando dispositivo FIFO </tmp/fifo_wr>
+-------------------------------------------------------
+1623937693: 
+-------------------------------------------------------
+Creando una cola FIFO: /tmp/fifo_rd.
+-------------------------------------------------------
+1623937693: 
+-------------------------------------------------------
+Creando una cola FIFO: /tmp/fifo_wr.
+-------------------------------------------------------
+1623937693: 
+-------------------------------------------------------
+Creada la memoria compartida <0x45916038L>
+-------------------------------------------------------
+1623937693: 
+-------------------------------------------------------
+Inicializando contadores de mensajes de KEEP ALIVE
+-------------------------------------------------------
+1623937693: 
+-------------------------------------------------------
+Activado servidor TCP en puerto 12876.
+-------------------------------------------------------
+1623937693: 
+*************************************************
+:ok> CONTEXTO del ejercicio 1 preparado.
+*************************************************
+1623937693: COMMAND <who >> .trazas-8/alumno-45916038B>
+ana      :0           2021-06-17 15:06 (:0)
+1623937701: COMMAND <cp ./examen8 /tmp/.examen8>
+1623937701: COMMAND <cp -f /tmp/.examen8 ./examen8>
+1623937701: COMMAND <uname -a >> .trazas-8/alumno-45916038B>
+Linux ana-VirtualBox 4.15.0-144-generic #148-Ubuntu SMP Sat May 8 02:33:43 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+1623937701: COMMAND <ifconfig 2>&1 >> .trazas-8/alumno-45916038B>
+1623937701: COMMAND <echo -n 'MACHINE-ID: ' >> .trazas-8/alumno-45916038B>
+MACHINE-ID: 1623937701: COMMAND <cat /etc/machine-id >> .trazas-8/alumno-45916038B>
+3ee4344e935d4984ab86063ac6ab8a46
+1623937701: 
+La máquina está ya identificada.
+1623937701: RX: <OK Accepted>
+1623937701: TX: <CHECKPWD GpfgwNs6a1VOFC>
+1623937701: RX: <OK>
+1623937701: 
+********************************************
+           INICIANDO SESION
+********************************************
+1623937701: TX: <UUID 57206189-a595-4315-a2ca-430aed4a8e9a>
+1623937701: RX: <REGISTERED>
+1623937701: COMMAND <find . -type f -newer .signature -print | awk -v pwd="`pwd`/.trazas-8" '{ if(index($0,pwd) != 1) print }' > /tmp/.asitmp>
+1623937701: COMMAND <cp ./client.? .trazas-8>
+1623937701: COMMAND <tar zcf save_file-45916038B .trazas-8 > /dev/null>
+1623937701: COMMAND <echo "\nopen u017633.ehu.es\nuser anonymous anonymous\npassive\ncd LAB2021/examen-8\nput save_file-45916038B 45916038B-17-6-15h48\n" | 	  ftp -n 2>&1 > /dev/null>
+1623937706: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 1.
+
+*************************************************
+
+
+1623937706: COMMAND <ps u >> .trazas-8/alumno-45916038B>
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+ana       1967  0.0  0.0 212308  1812 tty2     Ssl+ 15:06   0:00 /usr/lib/gdm3/gdm-x-session --run-script env GNOME_SHELL_SESSION_MODE=ubuntu gnome-session --session=ubuntu
+ana       1969  2.6  4.6 614880 94620 tty2     Sl+  15:06   1:06 /usr/lib/xorg/Xorg vt2 -displayfd 3 -auth /run/user/1000/gdm/Xauthority -background none -noreset -keeptty -verbose 3
+ana       1980  0.0  0.2 634068  4104 tty2     Sl+  15:06   0:00 /usr/lib/gnome-session/gnome-session-binary --session=ubuntu
+ana       2160  9.0 15.2 3534420 311372 tty2   Rl+  15:06   3:43 /usr/bin/gnome-shell
+ana       2288  0.1  0.1 362020  3596 tty2     Sl   15:07   0:02 ibus-daemon --xim --panel disable
+ana       2306  0.0  0.0 281056  1880 tty2     Sl   15:07   0:00 /usr/lib/ibus/ibus-dconf
+ana       2308  0.0  0.3 344800  7264 tty2     Sl   15:07   0:00 /usr/lib/ibus/ibus-x11 --kill-daemon
+ana       2538  0.0  0.4 517964  8724 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-power
+ana       2542  0.0  0.1 349536  2612 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-print-notifications
+ana       2545  0.0  0.0 423428  1844 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-rfkill
+ana       2546  0.0  0.0 275948  1816 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-screensaver-proxy
+ana       2548  0.0  0.0 453204  2024 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-sharing
+ana       2556  0.0  0.0 378444  1044 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-smartcard
+ana       2558  0.0  0.0 335348  1780 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-sound
+ana       2565  0.0  0.4 495276  8396 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-xsettings
+ana       2580  0.0  0.4 429336  9288 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-wacom
+ana       2594  0.0  0.0 278524  2036 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-a11y-settings
+ana       2595  0.0  0.4 344360  8856 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-clipboard
+ana       2600  0.0  0.5 733352 10992 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-color
+ana       2605  0.0  0.2 470100  4304 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-datetime
+ana       2610  0.0  0.1 364832  2184 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-housekeeping
+ana       2619  0.0  0.4 498808  8976 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-keyboard
+ana       2623  0.0  0.5 1082512 10396 tty2    Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-media-keys
+ana       2629  0.0  0.0 278532  2032 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-mouse
+ana       2687  0.0  0.1 508976  3856 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-printer
+ana       2788  0.1  3.4 936352 70356 tty2     Sl+  15:07   0:04 nautilus-desktop
+ana       2790  0.0  0.1 271940  2968 tty2     Sl+  15:07   0:00 /usr/lib/gnome-disk-utility/gsd-disk-utility-notify
+ana       2795  0.2  7.2 1401532 147636 tty2   SLl+ 15:07   0:06 /usr/bin/gnome-software --gapplication-service
+ana       2910  0.0  0.1 205196  2512 tty2     Sl   15:07   0:00 /usr/lib/ibus/ibus-engine-simple
+ana       3485  0.0  0.5 645376 11936 tty2     Sl+  15:08   0:00 update-notifier
+ana       3715  0.0  0.4 804560  9412 tty2     Sl+  15:09   0:00 /usr/lib/deja-dup/deja-dup-monitor
+ana       3806  0.0  0.1  30132  3476 pts/0    Ss   15:09   0:00 bash
+ana       3983  0.0  0.1  30144  3828 pts/1    Ss   15:09   0:00 bash
+ana       4251  6.9 14.3 3883656 293828 tty2   Sl+  15:30   1:14 /usr/lib/firefox/firefox -new-window
+ana       4301  0.0  0.7 358436 15472 tty2     Sl+  15:31   0:00 /usr/lib/firefox/firefox -contentproc -parentBuildID 20210527174632 -prefsLen 1 -prefMapSize 238432 -appdir /usr/lib/firefox/browser 4251 true socket
+ana       4361  0.3  3.8 2637048 78668 tty2    Sl+  15:31   0:03 /usr/lib/firefox/firefox -contentproc -childID 1 -isForBrowser -prefsLen 123 -prefMapSize 238432 -parentBuildID 20210527174632 -appdir /usr/lib/firefox/browser 4251 true tab
+ana       4391  6.6 15.4 3131652 315112 tty2   Sl+  15:31   1:08 /usr/lib/firefox/firefox -contentproc -childID 2 -isForBrowser -prefsLen 227 -prefMapSize 238432 -parentBuildID 20210527174632 -appdir /usr/lib/firefox/browser 4251 true tab
+ana       4431  0.1  2.6 2610924 53740 tty2    Sl+  15:31   0:01 /usr/lib/firefox/firefox -contentproc -childID 3 -isForBrowser -prefsLen 5122 -prefMapSize 238432 -parentBuildID 20210527174632 -appdir /usr/lib/firefox/browser 4251 true tab
+ana       4510  0.0  1.8 2583748 37384 tty2    Sl+  15:31   0:00 /usr/lib/firefox/firefox -contentproc -childID 4 -isForBrowser -prefsLen 8372 -prefMapSize 238432 -parentBuildID 20210527174632 -appdir /usr/lib/firefox/browser 4251 true tab
+ana       4541  0.0  0.8 367228 17636 tty2     Sl+  15:32   0:00 /usr/lib/firefox/firefox -contentproc -parentBuildID 20210527174632 -prefsLen 8419 -prefMapSize 238432 -appdir /usr/lib/firefox/browser 4251 true rdd
+ana       4876  0.0  0.0   4524   744 pts/1    S+   15:48   0:00 ./client 4672
+ana       4895  0.0  0.0   4524    84 pts/1    S+   15:48   0:00 ./client 4672
+ana       4896  0.0  0.0   6644  1664 pts/1    S+   15:48   0:00 ./client 4672
+ana       4897  0.0  0.0   6644  1664 pts/1    S+   15:48   0:00 ./client 4672
+ana       4898  0.0  0.1  15192  2204 pts/0    S+   15:48   0:00 ./examen8
+ana       4923  0.0  0.0   4636   916 pts/0    S+   15:48   0:00 sh -c ps u >> .trazas-8/alumno-45916038B
+ana       4924  0.0  0.1  44564  3292 pts/0    R+   15:48   0:00 ps u
+1623937706: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-8/.n_cliente>
+1623937706: 
+-------------------------------------------------------
+Número de procesos cliente (0) inadecuado. Debe ser (1)
+-------------------------------------------------------
+1623937706: 
+[5m*************************************************
+Problemas en la inicialización del ejercicio 1.
+
+*************************************************[0m
+1623937706: COMMAND <who >> .trazas-8/alumno-45916038B>
+ana      :0           2021-06-17 15:06 (:0)
+1623937722: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 1.
+
+*************************************************
+
+
+1623937722: COMMAND <ps u >> .trazas-8/alumno-45916038B>
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+ana       1967  0.0  0.0 212308  1812 tty2     Ssl+ 15:06   0:00 /usr/lib/gdm3/gdm-x-session --run-script env GNOME_SHELL_SESSION_MODE=ubuntu gnome-session --session=ubuntu
+ana       1969  2.6  4.6 614880 94620 tty2     Rl+  15:06   1:07 /usr/lib/xorg/Xorg vt2 -displayfd 3 -auth /run/user/1000/gdm/Xauthority -background none -noreset -keeptty -verbose 3
+ana       1980  0.0  0.2 634068  4104 tty2     Sl+  15:06   0:00 /usr/lib/gnome-session/gnome-session-binary --session=ubuntu
+ana       2160  9.0 15.2 3534420 311440 tty2   Rl+  15:06   3:47 /usr/bin/gnome-shell
+ana       2288  0.1  0.1 362020  3596 tty2     Sl   15:07   0:02 ibus-daemon --xim --panel disable
+ana       2306  0.0  0.0 281056  1880 tty2     Sl   15:07   0:00 /usr/lib/ibus/ibus-dconf
+ana       2308  0.0  0.3 344800  7264 tty2     Sl   15:07   0:00 /usr/lib/ibus/ibus-x11 --kill-daemon
+ana       2538  0.0  0.4 517964  8724 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-power
+ana       2542  0.0  0.1 349536  2612 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-print-notifications
+ana       2545  0.0  0.0 423428  1844 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-rfkill
+ana       2546  0.0  0.0 275948  1816 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-screensaver-proxy
+ana       2548  0.0  0.0 453204  2024 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-sharing
+ana       2556  0.0  0.0 378444  1044 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-smartcard
+ana       2558  0.0  0.0 335348  1780 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-sound
+ana       2565  0.0  0.4 495276  8396 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-xsettings
+ana       2580  0.0  0.4 429336  9288 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-wacom
+ana       2594  0.0  0.0 278524  2036 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-a11y-settings
+ana       2595  0.0  0.4 344360  8856 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-clipboard
+ana       2600  0.0  0.5 733352 10992 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-color
+ana       2605  0.0  0.2 470100  4304 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-datetime
+ana       2610  0.0  0.1 364832  2184 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-housekeeping
+ana       2619  0.0  0.4 498808  8976 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-keyboard
+ana       2623  0.0  0.5 1082512 10396 tty2    Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-media-keys
+ana       2629  0.0  0.0 278532  2032 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-mouse
+ana       2687  0.0  0.1 508976  3856 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-printer
+ana       2788  0.1  3.4 936352 70356 tty2     Sl+  15:07   0:04 nautilus-desktop
+ana       2790  0.0  0.1 271940  2968 tty2     Sl+  15:07   0:00 /usr/lib/gnome-disk-utility/gsd-disk-utility-notify
+ana       2795  0.2  7.2 1401532 147636 tty2   SLl+ 15:07   0:06 /usr/bin/gnome-software --gapplication-service
+ana       2910  0.0  0.1 205196  2512 tty2     Sl   15:07   0:00 /usr/lib/ibus/ibus-engine-simple
+ana       3485  0.0  0.5 645376 11936 tty2     Sl+  15:08   0:00 update-notifier
+ana       3715  0.0  0.4 804560  9412 tty2     Sl+  15:09   0:00 /usr/lib/deja-dup/deja-dup-monitor
+ana       3806  0.0  0.1  30132  3476 pts/0    Ss   15:09   0:00 bash
+ana       3983  0.0  0.1  30144  3828 pts/1    Ss   15:09   0:00 bash
+ana       4251  6.8 14.3 3883656 293828 tty2   Sl+  15:30   1:14 /usr/lib/firefox/firefox -new-window
+ana       4301  0.0  0.7 358436 15472 tty2     Sl+  15:31   0:00 /usr/lib/firefox/firefox -contentproc -parentBuildID 20210527174632 -prefsLen 1 -prefMapSize 238432 -appdir /usr/lib/firefox/browser 4251 true socket
+ana       4361  0.3  3.8 2637048 78668 tty2    Sl+  15:31   0:03 /usr/lib/firefox/firefox -contentproc -childID 1 -isForBrowser -prefsLen 123 -prefMapSize 238432 -parentBuildID 20210527174632 -appdir /usr/lib/firefox/browser 4251 true tab
+ana       4391  6.6 15.6 3131652 318628 tty2   Sl+  15:31   1:09 /usr/lib/firefox/firefox -contentproc -childID 2 -isForBrowser -prefsLen 227 -prefMapSize 238432 -parentBuildID 20210527174632 -appdir /usr/lib/firefox/browser 4251 true tab
+ana       4431  0.1  2.6 2610924 53740 tty2    Sl+  15:31   0:01 /usr/lib/firefox/firefox -contentproc -childID 3 -isForBrowser -prefsLen 5122 -prefMapSize 238432 -parentBuildID 20210527174632 -appdir /usr/lib/firefox/browser 4251 true tab
+ana       4510  0.0  1.8 2583748 37384 tty2    Sl+  15:31   0:00 /usr/lib/firefox/firefox -contentproc -childID 4 -isForBrowser -prefsLen 8372 -prefMapSize 238432 -parentBuildID 20210527174632 -appdir /usr/lib/firefox/browser 4251 true tab
+ana       4541  0.0  0.8 367228 17636 tty2     Sl+  15:32   0:00 /usr/lib/firefox/firefox -contentproc -parentBuildID 20210527174632 -prefsLen 8419 -prefMapSize 238432 -appdir /usr/lib/firefox/browser 4251 true rdd
+ana       4898  0.0  0.1  15192  2204 pts/0    S+   15:48   0:00 ./examen8
+ana       4932  0.0  0.0   4520   760 pts/1    S+   15:48   0:00 ./client 4898
+ana       4933  0.0  0.0   4636   860 pts/0    S+   15:48   0:00 sh -c ps u >> .trazas-8/alumno-45916038B
+ana       4934  0.0  0.1  44564  3292 pts/0    R+   15:48   0:00 ps u
+1623937722: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-8/.n_cliente>
+1623937722: COMMAND <ipcrm -M 0x45916038 >> .trazas-8/alumno-45916038B>
+1623937722: 
+-------------------------------------------------------
+Borrando la memoria compartida <0x45916038L>
+-------------------------------------------------------
+1623937722: COMMAND <rm /tmp/fifo_rd >> .trazas-8/alumno-45916038B>
+1623937722: 
+-------------------------------------------------------
+Borrando dispositivo FIFO </tmp/fifo_rd>
+-------------------------------------------------------
+1623937722: COMMAND <rm /tmp/fifo_wr >> .trazas-8/alumno-45916038B>
+1623937722: 
+-------------------------------------------------------
+Borrando dispositivo FIFO </tmp/fifo_wr>
+-------------------------------------------------------
+1623937722: 
+-------------------------------------------------------
+Creando una cola FIFO: /tmp/fifo_rd.
+-------------------------------------------------------
+1623937722: 
+-------------------------------------------------------
+Creando una cola FIFO: /tmp/fifo_wr.
+-------------------------------------------------------
+1623937722: 
+-------------------------------------------------------
+Creada la memoria compartida <0x45916038L>
+-------------------------------------------------------
+1623937722: 
+-------------------------------------------------------
+Inicializando contadores de mensajes de KEEP ALIVE
+-------------------------------------------------------
+1623937722: 
+*************************************************
+:ok> CONTEXTO del ejercicio 1 preparado.
+*************************************************
+1623937722: COMMAND <who >> .trazas-8/alumno-45916038B>
+ana      :0           2021-06-17 15:06 (:0)
+1623937722: 
+-------------------------------------------------------
+Activando un servidor UDP en el puerto <12932>
+-------------------------------------------------------
+1623937722: 
+-------------------------------------------------------
+Activado servidor TCP en puerto 12932.
+-------------------------------------------------------
+1623937725: 
+-------------------------------------------------------
+Recibida una señal (10)
+-------------------------------------------------------
+1623937725: 
+-------------------------------------------------------
+Abierto el dispositivo FIFO </tmp/fifo_wr>
+-------------------------------------------------------
+1623937725: 
+-------------------------------------------------------
+Recibido 10 bytes del FIFO /tmp/fifo_wr
+-------------------------------------------------------
+1623937725: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <1> es <568>.
+********************************************[0m
+1623937725: 
+-------------------------------------------------------
+Abierto el dispositivo FIFO </tmp/fifo_rd>
+-------------------------------------------------------
+1623937725: 
+-------------------------------------------------------
+Enviando 6 bytes al FIFO /tmp/fifo_rd
+-------------------------------------------------------
+1623937725: 
+-------------------------------------------------------
+Recibida conexión <127.0.0.1> en servidor TCP en el puerto <12932>
+-------------------------------------------------------
+1623937725: 
+-------------------------------------------------------
+REcibido via TCP 10 bytes del cliente 127.0.0.1
+-------------------------------------------------------
+1623937725: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <4> es <651>.
+********************************************[0m
+1623937725: 
+-------------------------------------------------------
+Enviando via TCP 6 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623937725: 
+-------------------------------------------------------
+Recibido via UDP 10 bytes del cliente 127.0.0.1
+-------------------------------------------------------
+1623937725: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <7> es <538>.
+********************************************[0m
+1623937725: 
+-------------------------------------------------------
+Enviando via UDP 6 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623937725: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-8/.n_cliente>
+1623937725: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <10> es <181>.
+********************************************[0m
+1623937725: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 4932.
+-------------------------------------------------------
+1623937727: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 4932.
+-------------------------------------------------------
+1623937728: 
+-------------------------------------------------------
+Enviando 3 bytes al FIFO /tmp/fifo_rd
+-------------------------------------------------------
+1623937728: 
+-------------------------------------------------------
+Recibido 4 bytes del FIFO /tmp/fifo_wr
+-------------------------------------------------------
+1623937728: 
+-------------------------------------------------------
+Enviando via TCP 3 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623937728: 
+-------------------------------------------------------
+REcibido via TCP 4 bytes del cliente 127.0.0.1
+-------------------------------------------------------
+1623937728: 
+-------------------------------------------------------
+Enviando via UDP 3 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623937728: 
+-------------------------------------------------------
+Recibido via UDP 4 bytes del cliente 127.0.0.1
+-------------------------------------------------------
+1623937729: 
+-------------------------------------------------------
+Enviando SEÑAL (10) al proceso 4932.
+-------------------------------------------------------
+1623937730: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 4932.
+-------------------------------------------------------
+1623937731: 
+-------------------------------------------------------
+Enviando 3 bytes al FIFO /tmp/fifo_rd
+-------------------------------------------------------
+1623937731: 
+-------------------------------------------------------
+Recibido 4 bytes del FIFO /tmp/fifo_wr
+-------------------------------------------------------
+1623937731: 
+-------------------------------------------------------
+Enviando via TCP 3 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623937731: 
+-------------------------------------------------------
+REcibido via TCP 4 bytes del cliente 127.0.0.1
+-------------------------------------------------------
+1623937731: 
+-------------------------------------------------------
+Enviando via UDP 3 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623937731: 
+-------------------------------------------------------
+Recibido via UDP 4 bytes del cliente 127.0.0.1
+-------------------------------------------------------
+1623937732: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 4932.
+-------------------------------------------------------
+1623937734: 
+-------------------------------------------------------
+Enviando via UDP 3 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623937734: 
+-------------------------------------------------------
+Enviando 3 bytes al FIFO /tmp/fifo_rd
+-------------------------------------------------------
+1623937734: 
+-------------------------------------------------------
+Recibido via UDP 4 bytes del cliente 127.0.0.1
+-------------------------------------------------------
+1623937734: 
+-------------------------------------------------------
+Recibido 4 bytes del FIFO /tmp/fifo_wr
+-------------------------------------------------------
+1623937734: 
+-------------------------------------------------------
+Enviando via TCP 3 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623937734: 
+-------------------------------------------------------
+REcibido via TCP 4 bytes del cliente 127.0.0.1
+-------------------------------------------------------
+1623937734: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 4932.
+-------------------------------------------------------
+1623937736: 
+-------------------------------------------------------
+Enviando SEÑAL (10) al proceso 4932.
+-------------------------------------------------------
+1623937737: 
+-------------------------------------------------------
+Enviando via UDP 10 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623937737: 
+-------------------------------------------------------
+Enviando via TCP 11 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623937737: 
+-------------------------------------------------------
+Enviando 11 bytes al FIFO /tmp/fifo_rd
+-------------------------------------------------------
+1623937737: 
+-------------------------------------------------------
+Recibido via UDP 8 bytes del cliente 127.0.0.1
+-------------------------------------------------------
+1623937737: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <8> es <31>.
+********************************************[0m
+1623937737: 
+-------------------------------------------------------
+Enviando via UDP 6 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623937737: 
+-------------------------------------------------------
+REcibido via TCP 9 bytes del cliente 127.0.0.1
+-------------------------------------------------------
+1623937737: 
+-------------------------------------------------------
+Recibido 9 bytes del FIFO /tmp/fifo_wr
+-------------------------------------------------------
+1623937737: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <2> es <141>.
+********************************************[0m
+1623937737: 
+-------------------------------------------------------
+Enviando 6 bytes al FIFO /tmp/fifo_rd
+-------------------------------------------------------
+1623937737: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <5> es <460>.
+********************************************[0m
+1623937737: 
+-------------------------------------------------------
+Enviando via TCP 6 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623937737: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 4932.
+-------------------------------------------------------
+1623937738: 
+-------------------------------------------------------
+Enviando via TCP 3 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623937738: 
+-------------------------------------------------------
+REcibido via TCP 4 bytes del cliente 127.0.0.1
+-------------------------------------------------------
+1623937738: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <6> es <961>.
+********************************************[0m
+1623937738: 
+-------------------------------------------------------
+Enviando 3 bytes al FIFO /tmp/fifo_rd
+-------------------------------------------------------
+1623937738: 
+-------------------------------------------------------
+Enviando via UDP 3 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623937738: 
+-------------------------------------------------------
+Recibido 4 bytes del FIFO /tmp/fifo_wr
+-------------------------------------------------------
+1623937738: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <3> es <990>.
+********************************************[0m
+1623937738: 
+-------------------------------------------------------
+Recibido via UDP 4 bytes del cliente 127.0.0.1
+-------------------------------------------------------
+1623937738: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <9> es <640>.
+********************************************[0m
+1623937739: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 4932.
+-------------------------------------------------------
+1623937741: 
+-------------------------------------------------------
+Enviando 3 bytes al FIFO /tmp/fifo_rd
+-------------------------------------------------------
+1623937741: 
+-------------------------------------------------------
+Enviando via UDP 3 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623937741: 
+-------------------------------------------------------
+Recibido via UDP 4 bytes del cliente 127.0.0.1
+-------------------------------------------------------
+1623937741: 
+-------------------------------------------------------
+Recibido 4 bytes del FIFO /tmp/fifo_wr
+-------------------------------------------------------
+1623937741: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 4932.
+-------------------------------------------------------
+1623937742: 
+-------------------------------------------------------
+Enviando via TCP 5 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623937742: 
+-------------------------------------------------------
+REcibido via TCP 4 bytes del cliente 127.0.0.1
+-------------------------------------------------------
+1623937742: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <14> es <929>.
+********************************************[0m
+1623937743: 
+-------------------------------------------------------
+Contador 3 de KA no coincide 0.
+-------------------------------------------------------
+1623937745: 
+-------------------------------------------------------
+Enviando via UDP 5 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623937745: 
+-------------------------------------------------------
+Recibido via UDP 4 bytes del cliente 127.0.0.1
+-------------------------------------------------------
+1623937745: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <15> es <274>.
+********************************************[0m
+1623937745: 
+-------------------------------------------------------
+Enviando 5 bytes al FIFO /tmp/fifo_rd
+-------------------------------------------------------
+1623937745: 
+-------------------------------------------------------
+Recibido 4 bytes del FIFO /tmp/fifo_wr
+-------------------------------------------------------
+1623937745: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <13> es <612>.
+********************************************[0m
+1623937755: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 2.
+
+*************************************************
+
+
+1623937755: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-8/.n_cliente>
+1623937755: 
+-------------------------------------------------------
+Número de procesos cliente (3) inadecuado. Debe ser (4)
+-------------------------------------------------------
+1623937755: 
+*************************************************
+:ok> CONTEXTO del ejercicio 2 preparado.
+*************************************************
+1623937755: COMMAND <who >> .trazas-8/alumno-45916038B>
+ana      :0           2021-06-17 15:06 (:0)
+1623938001: COMMAND <find . -type f -newer .signature -print | awk -v pwd="`pwd`/.trazas-8" '{ if(index($0,pwd) != 1) print }' > /tmp/.asitmp>
+1623938001: COMMAND <cp ./client.? .trazas-8>
+1623938001: COMMAND <tar zcf save_file-45916038B .trazas-8 > /dev/null>
+1623938001: COMMAND <echo "\nopen u017633.ehu.es\nuser anonymous anonymous\npassive\ncd LAB2021/examen-8\nput save_file-45916038B 45916038B-17-6-15h48\n" | 	  ftp -n 2>&1 > /dev/null>
+1623938002: INTENTO DE CONEXION DIA:17 MES:6 HORA:15:53m.
+1623938301: COMMAND <find . -type f -newer .signature -print | awk -v pwd="`pwd`/.trazas-8" '{ if(index($0,pwd) != 1) print }' > /tmp/.asitmp>
+1623938301: COMMAND <cp ./client.? .trazas-8>
+1623938301: COMMAND <tar zcf save_file-45916038B .trazas-8 > /dev/null>
+1623938301: COMMAND <echo "\nopen u017633.ehu.es\nuser anonymous anonymous\npassive\ncd LAB2021/examen-8\nput save_file-45916038B 45916038B-17-6-15h53\n" | 	  ftp -n 2>&1 > /dev/null>
+1623938301: INTENTO DE CONEXION DIA:17 MES:6 HORA:15:58m.
+1623938320: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 1.
+
+*************************************************
+
+
+1623938320: COMMAND <ps u >> .trazas-8/alumno-45916038B>
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+ana       1967  0.0  0.1 212308  2068 tty2     Ssl+ 15:06   0:00 /usr/lib/gdm3/gdm-x-session --run-script env GNOME_SHELL_SESSION_MODE=ubuntu gnome-session --session=ubuntu
+ana       1969  2.6  4.6 614880 95084 tty2     Sl+  15:06   1:23 /usr/lib/xorg/Xorg vt2 -displayfd 3 -auth /run/user/1000/gdm/Xauthority -background none -noreset -keeptty -verbose 3
+ana       1980  0.0  0.2 634068  4768 tty2     Sl+  15:06   0:00 /usr/lib/gnome-session/gnome-session-binary --session=ubuntu
+ana       2160  9.1 15.4 3534428 315992 tty2   Sl+  15:06   4:43 /usr/bin/gnome-shell
+ana       2288  0.1  0.1 362020  3596 tty2     Sl   15:07   0:03 ibus-daemon --xim --panel disable
+ana       2306  0.0  0.0 281056  2000 tty2     Sl   15:07   0:00 /usr/lib/ibus/ibus-dconf
+ana       2308  0.0  0.3 344800  7424 tty2     Sl   15:07   0:00 /usr/lib/ibus/ibus-x11 --kill-daemon
+ana       2538  0.0  0.4 517964  9876 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-power
+ana       2542  0.0  0.1 349536  2712 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-print-notifications
+ana       2545  0.0  0.1 423428  2220 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-rfkill
+ana       2546  0.0  0.0 275948  2028 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-screensaver-proxy
+ana       2548  0.0  0.1 453204  2520 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-sharing
+ana       2556  0.0  0.0 378444  1304 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-smartcard
+ana       2558  0.0  0.1 335348  2056 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-sound
+ana       2565  0.0  0.4 495276  8396 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-xsettings
+ana       2580  0.0  0.4 429336  9288 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-wacom
+ana       2594  0.0  0.0 278524  2036 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-a11y-settings
+ana       2595  0.0  0.4 344360  8856 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-clipboard
+ana       2600  0.0  0.5 733352 10992 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-color
+ana       2605  0.0  0.2 470100  4304 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-datetime
+ana       2610  0.0  0.1 364832  2184 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-housekeeping
+ana       2619  0.0  0.4 498808  9716 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-keyboard
+ana       2623  0.0  0.5 1082512 10396 tty2    Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-media-keys
+ana       2629  0.0  0.0 278532  2032 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-mouse
+ana       2687  0.0  0.1 508976  3896 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-printer
+ana       2788  0.1  3.5 936352 71568 tty2     Sl+  15:07   0:04 nautilus-desktop
+ana       2790  0.0  0.1 271940  2968 tty2     Sl+  15:07   0:00 /usr/lib/gnome-disk-utility/gsd-disk-utility-notify
+ana       2795  0.2  7.2 1401532 147636 tty2   SLl+ 15:07   0:06 /usr/bin/gnome-software --gapplication-service
+ana       2910  0.0  0.1 205196  2512 tty2     Sl   15:07   0:00 /usr/lib/ibus/ibus-engine-simple
+ana       3485  0.0  0.7 645376 15192 tty2     Sl+  15:08   0:00 update-notifier
+ana       3715  0.0  0.4 804560  9412 tty2     Sl+  15:09   0:00 /usr/lib/deja-dup/deja-dup-monitor
+ana       3806  0.0  0.1  30132  3476 pts/0    Ss   15:09   0:00 bash
+ana       3983  0.0  0.2  30276  4356 pts/1    Ss   15:09   0:00 bash
+ana       4251  4.5 14.5 3883656 296820 tty2   Sl+  15:30   1:16 /usr/lib/firefox/firefox -new-window
+ana       4301  0.0  0.7 358436 15472 tty2     Sl+  15:31   0:00 /usr/lib/firefox/firefox -contentproc -parentBuildID 20210527174632 -prefsLen 1 -prefMapSize 238432 -appdir /usr/lib/firefox/browser 4251 true socket
+ana       4361  0.1  3.8 2637048 79564 tty2    Sl+  15:31   0:03 /usr/lib/firefox/firefox -contentproc -childID 1 -isForBrowser -prefsLen 123 -prefMapSize 238432 -parentBuildID 20210527174632 -appdir /usr/lib/firefox/browser 4251 true tab
+ana       4391  4.9 17.3 3138820 353764 tty2   Sl+  15:31   1:20 /usr/lib/firefox/firefox -contentproc -childID 2 -isForBrowser -prefsLen 227 -prefMapSize 238432 -parentBuildID 20210527174632 -appdir /usr/lib/firefox/browser 4251 true tab
+ana       4431  0.1  2.6 2610924 53740 tty2    Sl+  15:31   0:01 /usr/lib/firefox/firefox -contentproc -childID 3 -isForBrowser -prefsLen 5122 -prefMapSize 238432 -parentBuildID 20210527174632 -appdir /usr/lib/firefox/browser 4251 true tab
+ana       4510  0.0  1.8 2583748 37384 tty2    Sl+  15:31   0:00 /usr/lib/firefox/firefox -contentproc -childID 4 -isForBrowser -prefsLen 8372 -prefMapSize 238432 -parentBuildID 20210527174632 -appdir /usr/lib/firefox/browser 4251 true tab
+ana       4541  0.0  0.8 367228 17636 tty2     Sl+  15:32   0:00 /usr/lib/firefox/firefox -contentproc -parentBuildID 20210527174632 -prefsLen 8419 -prefMapSize 238432 -appdir /usr/lib/firefox/browser 4251 true rdd
+ana       4898  0.0  0.1 334712  2404 pts/0    Sl+  15:48   0:00 ./examen8
+ana       4951  0.0  0.0   4524    80 pts/1    S    15:48   0:00 ./client 4898
+ana       4952  0.0  0.0   6644  1536 pts/1    S    15:48   0:00 ./client 4898
+ana       4953  0.0  0.0   6644  1536 pts/1    S    15:48   0:00 ./client 4898
+ana       5067  0.0  0.0   4520   760 pts/1    S+   15:58   0:00 ./client 4898
+ana       5068  0.0  0.0   4636   864 pts/0    S+   15:58   0:00 sh -c ps u >> .trazas-8/alumno-45916038B
+ana       5069  0.0  0.1  44564  3368 pts/0    R+   15:58   0:00 ps u
+1623938320: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-8/.n_cliente>
+1623938320: 
+-------------------------------------------------------
+Número de procesos cliente (4) inadecuado. Debe ser (1)
+-------------------------------------------------------
+1623938320: 
+[5m*************************************************
+Problemas en la inicialización del ejercicio 1.
+
+*************************************************[0m
+1623938320: COMMAND <who >> .trazas-8/alumno-45916038B>
+ana      :0           2021-06-17 15:06 (:0)
+1623938322: 
+-------------------------------------------------------
+Recibida una señal (10)
+-------------------------------------------------------
+1623938322: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 4951.
+-------------------------------------------------------
+1623938324: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 4951.
+-------------------------------------------------------
+1623938326: 
+-------------------------------------------------------
+Enviando SEÑAL (10) al proceso 4951.
+-------------------------------------------------------
+1623938327: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 4951.
+-------------------------------------------------------
+1623938329: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 4951.
+-------------------------------------------------------
+1623938331: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 4951.
+-------------------------------------------------------
+1623938333: 
+-------------------------------------------------------
+Enviando SEÑAL (10) al proceso 4951.
+-------------------------------------------------------
+1623938334: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 4951.
+-------------------------------------------------------
+1623938336: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 4951.
+-------------------------------------------------------
+1623938338: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 4951.
+-------------------------------------------------------
+1623938340: 
+-------------------------------------------------------
+Contador 3 de KA no coincide 0.
+-------------------------------------------------------
+1623938344: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 2.
+
+*************************************************
+
+
+1623938344: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-8/.n_cliente>
+1623938344: 
+-------------------------------------------------------
+Número de procesos cliente (5) inadecuado. Debe ser (4)
+-------------------------------------------------------
+1623938344: 
+*************************************************
+:ok> CONTEXTO del ejercicio 2 preparado.
+*************************************************
+1623938344: COMMAND <who >> .trazas-8/alumno-45916038B>
+ana      :0           2021-06-17 15:06 (:0)
+1623938359: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 1.
+
+*************************************************
+
+
+1623938359: COMMAND <ps u >> .trazas-8/alumno-45916038B>
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+ana       1967  0.0  0.1 212308  2068 tty2     Ssl+ 15:06   0:00 /usr/lib/gdm3/gdm-x-session --run-script env GNOME_SHELL_SESSION_MODE=ubuntu gnome-session --session=ubuntu
+ana       1969  2.7  4.6 614880 95084 tty2     Sl+  15:06   1:25 /usr/lib/xorg/Xorg vt2 -displayfd 3 -auth /run/user/1000/gdm/Xauthority -background none -noreset -keeptty -verbose 3
+ana       1980  0.0  0.2 634068  4768 tty2     Sl+  15:06   0:00 /usr/lib/gnome-session/gnome-session-binary --session=ubuntu
+ana       2160  9.2 15.4 3534428 315816 tty2   Rl+  15:06   4:50 /usr/bin/gnome-shell
+ana       2288  0.1  0.1 362020  3596 tty2     Sl   15:07   0:03 ibus-daemon --xim --panel disable
+ana       2306  0.0  0.0 281056  2000 tty2     Sl   15:07   0:00 /usr/lib/ibus/ibus-dconf
+ana       2308  0.0  0.3 344800  7424 tty2     Sl   15:07   0:00 /usr/lib/ibus/ibus-x11 --kill-daemon
+ana       2538  0.0  0.4 517964  9876 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-power
+ana       2542  0.0  0.1 349536  2712 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-print-notifications
+ana       2545  0.0  0.1 423428  2220 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-rfkill
+ana       2546  0.0  0.0 275948  2028 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-screensaver-proxy
+ana       2548  0.0  0.1 453204  2520 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-sharing
+ana       2556  0.0  0.0 378444  1304 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-smartcard
+ana       2558  0.0  0.1 335348  2056 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-sound
+ana       2565  0.0  0.4 495276  8396 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-xsettings
+ana       2580  0.0  0.4 429336  9288 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-wacom
+ana       2594  0.0  0.0 278524  2036 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-a11y-settings
+ana       2595  0.0  0.4 344360  8856 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-clipboard
+ana       2600  0.0  0.5 733352 10992 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-color
+ana       2605  0.0  0.2 470100  4304 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-datetime
+ana       2610  0.0  0.1 364832  2184 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-housekeeping
+ana       2619  0.0  0.4 498808  9716 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-keyboard
+ana       2623  0.0  0.5 1082512 10396 tty2    Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-media-keys
+ana       2629  0.0  0.0 278532  2032 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-mouse
+ana       2687  0.0  0.1 508976  3896 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-printer
+ana       2788  0.1  3.5 936352 71568 tty2     Sl+  15:07   0:04 nautilus-desktop
+ana       2790  0.0  0.1 271940  2968 tty2     Sl+  15:07   0:00 /usr/lib/gnome-disk-utility/gsd-disk-utility-notify
+ana       2795  0.2  7.2 1401532 147636 tty2   SLl+ 15:07   0:06 /usr/bin/gnome-software --gapplication-service
+ana       2910  0.0  0.1 205196  2512 tty2     Sl   15:07   0:00 /usr/lib/ibus/ibus-engine-simple
+ana       3485  0.0  0.7 645376 15192 tty2     Sl+  15:08   0:00 update-notifier
+ana       3715  0.0  0.4 804560  9412 tty2     Sl+  15:09   0:00 /usr/lib/deja-dup/deja-dup-monitor
+ana       3806  0.0  0.1  30132  3476 pts/0    Ss   15:09   0:00 bash
+ana       3983  0.0  0.2  30276  4356 pts/1    Ss   15:09   0:00 bash
+ana       4251  4.4 14.5 3883652 296976 tty2   Sl+  15:30   1:17 /usr/lib/firefox/firefox -new-window
+ana       4301  0.0  0.7 358436 15472 tty2     Sl+  15:31   0:00 /usr/lib/firefox/firefox -contentproc -parentBuildID 20210527174632 -prefsLen 1 -prefMapSize 238432 -appdir /usr/lib/firefox/browser 4251 true socket
+ana       4361  0.1  3.8 2637048 79564 tty2    Sl+  15:31   0:03 /usr/lib/firefox/firefox -contentproc -childID 1 -isForBrowser -prefsLen 123 -prefMapSize 238432 -parentBuildID 20210527174632 -appdir /usr/lib/firefox/browser 4251 true tab
+ana       4391  4.8 17.3 3138816 354436 tty2   Sl+  15:31   1:21 /usr/lib/firefox/firefox -contentproc -childID 2 -isForBrowser -prefsLen 227 -prefMapSize 238432 -parentBuildID 20210527174632 -appdir /usr/lib/firefox/browser 4251 true tab
+ana       4431  0.1  2.6 2610924 53740 tty2    Sl+  15:31   0:01 /usr/lib/firefox/firefox -contentproc -childID 3 -isForBrowser -prefsLen 5122 -prefMapSize 238432 -parentBuildID 20210527174632 -appdir /usr/lib/firefox/browser 4251 true tab
+ana       4510  0.0  1.8 2583748 37384 tty2    Sl+  15:31   0:00 /usr/lib/firefox/firefox -contentproc -childID 4 -isForBrowser -prefsLen 8372 -prefMapSize 238432 -parentBuildID 20210527174632 -appdir /usr/lib/firefox/browser 4251 true tab
+ana       4541  0.0  0.8 367228 17636 tty2     Sl+  15:32   0:00 /usr/lib/firefox/firefox -contentproc -parentBuildID 20210527174632 -prefsLen 8419 -prefMapSize 238432 -appdir /usr/lib/firefox/browser 4251 true rdd
+ana       4898  0.0  0.1 334712  2404 pts/0    Sl+  15:48   0:00 ./examen8
+ana       5086  0.0  0.0   4520   800 pts/1    S+   15:59   0:00 ./client 4898
+ana       5087  0.0  0.0   4636   860 pts/0    S+   15:59   0:00 sh -c ps u >> .trazas-8/alumno-45916038B
+ana       5088  0.0  0.1  44564  3272 pts/0    R+   15:59   0:00 ps u
+1623938359: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-8/.n_cliente>
+1623938360: COMMAND <ipcrm -M 0x45916038 >> .trazas-8/alumno-45916038B>
+1623938360: 
+-------------------------------------------------------
+Borrando la memoria compartida <0x45916038L>
+-------------------------------------------------------
+1623938360: COMMAND <rm /tmp/fifo_rd >> .trazas-8/alumno-45916038B>
+1623938360: 
+-------------------------------------------------------
+Borrando dispositivo FIFO </tmp/fifo_rd>
+-------------------------------------------------------
+1623938360: COMMAND <rm /tmp/fifo_wr >> .trazas-8/alumno-45916038B>
+1623938360: 
+-------------------------------------------------------
+Borrando dispositivo FIFO </tmp/fifo_wr>
+-------------------------------------------------------
+1623938360: 
+-------------------------------------------------------
+Creando una cola FIFO: /tmp/fifo_rd.
+-------------------------------------------------------
+1623938360: 
+-------------------------------------------------------
+Creando una cola FIFO: /tmp/fifo_wr.
+-------------------------------------------------------
+1623938360: 
+-------------------------------------------------------
+Creada la memoria compartida <0x45916038L>
+-------------------------------------------------------
+1623938360: 
+-------------------------------------------------------
+Inicializando contadores de mensajes de KEEP ALIVE
+-------------------------------------------------------
+1623938360: 
+*************************************************
+:ok> CONTEXTO del ejercicio 1 preparado.
+*************************************************
+1623938360: COMMAND <who >> .trazas-8/alumno-45916038B>
+ana      :0           2021-06-17 15:06 (:0)
+1623938370: COMMAND <cp ./examen8 /tmp/.examen8>
+1623938370: COMMAND <cp -f /tmp/.examen8 ./examen8>
+1623938370: COMMAND <uname -a >> .trazas-8/alumno-45916038B>
+Linux ana-VirtualBox 4.15.0-144-generic #148-Ubuntu SMP Sat May 8 02:33:43 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+1623938370: COMMAND <ifconfig 2>&1 >> .trazas-8/alumno-45916038B>
+1623938370: COMMAND <echo -n 'MACHINE-ID: ' >> .trazas-8/alumno-45916038B>
+MACHINE-ID: 1623938370: COMMAND <cat /etc/machine-id >> .trazas-8/alumno-45916038B>
+3ee4344e935d4984ab86063ac6ab8a46
+1623938370: 
+La máquina está ya identificada.
+1623938370: RX: <OK Accepted>
+1623938370: TX: <CHECKPWD GpfgwNs6a1VOFC>
+1623938371: RX: <OK>
+1623938371: 
+********************************************
+           INICIANDO SESION
+********************************************
+1623938371: TX: <UUID 57206189-a595-4315-a2ca-430aed4a8e9a>
+1623938371: RX: <REGISTERED>
+1623938371: COMMAND <find . -type f -newer .signature -print | awk -v pwd="`pwd`/.trazas-8" '{ if(index($0,pwd) != 1) print }' > /tmp/.asitmp>
+1623938371: COMMAND <cp ./client.? .trazas-8>
+1623938371: COMMAND <tar zcf save_file-45916038B .trazas-8 > /dev/null>
+1623938371: COMMAND <echo "\nopen u017633.ehu.es\nuser anonymous anonymous\npassive\ncd LAB2021/examen-8\nput save_file-45916038B 45916038B-17-6-15h59\n" | 	  ftp -n 2>&1 > /dev/null>
+1623938380: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 1.
+
+*************************************************
+
+
+1623938380: COMMAND <ps u >> .trazas-8/alumno-45916038B>
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+ana       1967  0.0  0.1 212308  2068 tty2     Ssl+ 15:06   0:00 /usr/lib/gdm3/gdm-x-session --run-script env GNOME_SHELL_SESSION_MODE=ubuntu gnome-session --session=ubuntu
+ana       1969  2.7  4.6 614880 95084 tty2     Rl+  15:06   1:27 /usr/lib/xorg/Xorg vt2 -displayfd 3 -auth /run/user/1000/gdm/Xauthority -background none -noreset -keeptty -verbose 3
+ana       1980  0.0  0.2 634068  4768 tty2     Sl+  15:06   0:00 /usr/lib/gnome-session/gnome-session-binary --session=ubuntu
+ana       2160  9.3 15.4 3534428 315880 tty2   Rl+  15:06   4:54 /usr/bin/gnome-shell
+ana       2288  0.1  0.1 362020  3596 tty2     Sl   15:07   0:03 ibus-daemon --xim --panel disable
+ana       2306  0.0  0.0 281056  2000 tty2     Sl   15:07   0:00 /usr/lib/ibus/ibus-dconf
+ana       2308  0.0  0.3 344800  7424 tty2     Rl   15:07   0:00 /usr/lib/ibus/ibus-x11 --kill-daemon
+ana       2538  0.0  0.4 517964  9876 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-power
+ana       2542  0.0  0.1 349536  2712 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-print-notifications
+ana       2545  0.0  0.1 423428  2220 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-rfkill
+ana       2546  0.0  0.0 275948  2028 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-screensaver-proxy
+ana       2548  0.0  0.1 453204  2520 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-sharing
+ana       2556  0.0  0.0 378444  1304 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-smartcard
+ana       2558  0.0  0.1 335348  2056 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-sound
+ana       2565  0.0  0.4 495276  8396 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-xsettings
+ana       2580  0.0  0.4 429336  9288 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-wacom
+ana       2594  0.0  0.0 278524  2036 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-a11y-settings
+ana       2595  0.0  0.4 344360  8856 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-clipboard
+ana       2600  0.0  0.5 733352 10992 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-color
+ana       2605  0.0  0.2 470100  4304 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-datetime
+ana       2610  0.0  0.1 364832  2184 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-housekeeping
+ana       2619  0.0  0.4 498808  9716 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-keyboard
+ana       2623  0.0  0.5 1082512 10396 tty2    Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-media-keys
+ana       2629  0.0  0.0 278532  2032 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-mouse
+ana       2687  0.0  0.1 508976  3896 tty2     Sl+  15:07   0:00 /usr/lib/gnome-settings-daemon/gsd-printer
+ana       2788  0.1  3.5 936352 71568 tty2     Sl+  15:07   0:04 nautilus-desktop
+ana       2790  0.0  0.1 271940  2968 tty2     Sl+  15:07   0:00 /usr/lib/gnome-disk-utility/gsd-disk-utility-notify
+ana       2795  0.2  7.2 1401532 147636 tty2   SLl+ 15:07   0:06 /usr/bin/gnome-software --gapplication-service
+ana       2910  0.0  0.1 205196  2512 tty2     Sl   15:07   0:00 /usr/lib/ibus/ibus-engine-simple
+ana       3485  0.0  0.7 645376 15192 tty2     Sl+  15:08   0:00 update-notifier
+ana       3715  0.0  0.4 804560  9412 tty2     Sl+  15:09   0:00 /usr/lib/deja-dup/deja-dup-monitor
+ana       3806  0.0  0.1  30132  3580 pts/0    Ss   15:09   0:00 bash
+ana       3983  0.0  0.2  30276  4356 pts/1    Ss   15:09   0:00 bash
+ana       4251  4.4 14.5 3883656 296580 tty2   Sl+  15:30   1:17 /usr/lib/firefox/firefox -new-window
+ana       4301  0.0  0.7 358436 15472 tty2     Sl+  15:31   0:00 /usr/lib/firefox/firefox -contentproc -parentBuildID 20210527174632 -prefsLen 1 -prefMapSize 238432 -appdir /usr/lib/firefox/browser 4251 true socket
+ana       4361  0.1  3.8 2637048 79564 tty2    Sl+  15:31   0:03 /usr/lib/firefox/firefox -contentproc -childID 1 -isForBrowser -prefsLen 123 -prefMapSize 238432 -parentBuildID 20210527174632 -appdir /usr/lib/firefox/browser 4251 true tab
+ana       4391  4.8 17.3 3138820 354936 tty2   Sl+  15:31   1:21 /usr/lib/firefox/firefox -contentproc -childID 2 -isForBrowser -prefsLen 227 -prefMapSize 238432 -parentBuildID 20210527174632 -appdir /usr/lib/firefox/browser 4251 true tab
+ana       4431  0.1  2.6 2610924 53740 tty2    Sl+  15:31   0:01 /usr/lib/firefox/firefox -contentproc -childID 3 -isForBrowser -prefsLen 5122 -prefMapSize 238432 -parentBuildID 20210527174632 -appdir /usr/lib/firefox/browser 4251 true tab
+ana       4510  0.0  1.8 2583748 37384 tty2    Sl+  15:31   0:00 /usr/lib/firefox/firefox -contentproc -childID 4 -isForBrowser -prefsLen 8372 -prefMapSize 238432 -parentBuildID 20210527174632 -appdir /usr/lib/firefox/browser 4251 true tab
+ana       4541  0.0  0.8 367228 17636 tty2     Sl+  15:32   0:00 /usr/lib/firefox/firefox -contentproc -parentBuildID 20210527174632 -prefsLen 8419 -prefMapSize 238432 -appdir /usr/lib/firefox/browser 4251 true rdd
+ana       5110  0.0  0.1  15192  2288 pts/0    S+   15:59   0:00 ./examen8
+ana       5136  0.0  0.0   4520   752 pts/1    S+   15:59   0:00 ./client 5110
+ana       5137  0.0  0.0   4636   804 pts/0    S+   15:59   0:00 sh -c ps u >> .trazas-8/alumno-45916038B
+ana       5138  0.0  0.1  44564  3376 pts/0    R+   15:59   0:00 ps u
+1623938380: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-8/.n_cliente>
+1623938380: COMMAND <ipcrm -M 0x45916038 >> .trazas-8/alumno-45916038B>
+1623938380: 
+-------------------------------------------------------
+Borrando la memoria compartida <0x45916038L>
+-------------------------------------------------------
+1623938380: COMMAND <rm /tmp/fifo_rd >> .trazas-8/alumno-45916038B>
+1623938380: 
+-------------------------------------------------------
+Borrando dispositivo FIFO </tmp/fifo_rd>
+-------------------------------------------------------
+1623938380: COMMAND <rm /tmp/fifo_wr >> .trazas-8/alumno-45916038B>
+1623938380: 
+-------------------------------------------------------
+Borrando dispositivo FIFO </tmp/fifo_wr>
+-------------------------------------------------------
+1623938380: 
+-------------------------------------------------------
+Creando una cola FIFO: /tmp/fifo_rd.
+-------------------------------------------------------
+1623938380: 
+-------------------------------------------------------
+Creando una cola FIFO: /tmp/fifo_wr.
+-------------------------------------------------------
+1623938380: 
+-------------------------------------------------------
+Creada la memoria compartida <0x45916038L>
+-------------------------------------------------------
+1623938380: 
+-------------------------------------------------------
+Inicializando contadores de mensajes de KEEP ALIVE
+-------------------------------------------------------
+1623938380: 
+*************************************************
+:ok> CONTEXTO del ejercicio 1 preparado.
+*************************************************
+1623938380: COMMAND <who >> .trazas-8/alumno-45916038B>
+ana      :0           2021-06-17 15:06 (:0)
+1623938380: 
+-------------------------------------------------------
+Activando un servidor UDP en el puerto <13136>
+-------------------------------------------------------
+1623938380: 
+-------------------------------------------------------
+Activado servidor TCP en puerto 13136.
+-------------------------------------------------------
+1623938381: 
+-------------------------------------------------------
+Recibida conexión <127.0.0.1> en servidor TCP en el puerto <13136>
+-------------------------------------------------------
+1623938381: 
+-------------------------------------------------------
+REcibido via TCP 10 bytes del cliente 127.0.0.1
+-------------------------------------------------------
+1623938381: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <4> es <651>.
+********************************************[0m
+1623938381: 
+-------------------------------------------------------
+Enviando via TCP 6 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623938381: 
+-------------------------------------------------------
+Recibida una señal (10)
+-------------------------------------------------------
+1623938381: 
+-------------------------------------------------------
+Recibido via UDP 10 bytes del cliente 127.0.0.1
+-------------------------------------------------------
+1623938381: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <7> es <538>.
+********************************************[0m
+1623938381: 
+-------------------------------------------------------
+Enviando via UDP 6 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623938381: 
+-------------------------------------------------------
+Abierto el dispositivo FIFO </tmp/fifo_wr>
+-------------------------------------------------------
+1623938381: 
+-------------------------------------------------------
+Recibido 10 bytes del FIFO /tmp/fifo_wr
+-------------------------------------------------------
+1623938381: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <1> es <568>.
+********************************************[0m
+1623938381: 
+-------------------------------------------------------
+Abierto el dispositivo FIFO </tmp/fifo_rd>
+-------------------------------------------------------
+1623938381: 
+-------------------------------------------------------
+Enviando 6 bytes al FIFO /tmp/fifo_rd
+-------------------------------------------------------
+1623938382: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-8/.n_cliente>
+1623938382: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <10> es <181>.
+********************************************[0m
+1623938382: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 5136.
+-------------------------------------------------------
+1623938384: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 5136.
+-------------------------------------------------------
+1623938384: 
+-------------------------------------------------------
+Enviando via TCP 3 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623938384: 
+-------------------------------------------------------
+REcibido via TCP 4 bytes del cliente 127.0.0.1
+-------------------------------------------------------
+1623938384: 
+-------------------------------------------------------
+Enviando via UDP 3 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623938384: 
+-------------------------------------------------------
+Recibido via UDP 4 bytes del cliente 127.0.0.1
+-------------------------------------------------------
+1623938384: 
+-------------------------------------------------------
+Enviando 3 bytes al FIFO /tmp/fifo_rd
+-------------------------------------------------------
+1623938384: 
+-------------------------------------------------------
+Recibido 4 bytes del FIFO /tmp/fifo_wr
+-------------------------------------------------------
+1623938386: 
+-------------------------------------------------------
+Enviando SEÑAL (10) al proceso 5136.
+-------------------------------------------------------
+1623938387: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 5136.
+-------------------------------------------------------
+1623938387: 
+-------------------------------------------------------
+Enviando via UDP 3 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623938387: 
+-------------------------------------------------------
+Enviando 3 bytes al FIFO /tmp/fifo_rd
+-------------------------------------------------------
+1623938387: 
+-------------------------------------------------------
+Enviando via TCP 3 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623938387: 
+-------------------------------------------------------
+Recibido via UDP 4 bytes del cliente 127.0.0.1
+-------------------------------------------------------
+1623938387: 
+-------------------------------------------------------
+Recibido 4 bytes del FIFO /tmp/fifo_wr
+-------------------------------------------------------
+1623938387: 
+-------------------------------------------------------
+REcibido via TCP 4 bytes del cliente 127.0.0.1
+-------------------------------------------------------
+1623938389: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 5136.
+-------------------------------------------------------
+1623938390: 
+-------------------------------------------------------
+Enviando 3 bytes al FIFO /tmp/fifo_rd
+-------------------------------------------------------
+1623938390: 
+-------------------------------------------------------
+Enviando via UDP 3 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623938390: 
+-------------------------------------------------------
+Enviando via TCP 3 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623938390: 
+-------------------------------------------------------
+Recibido via UDP 4 bytes del cliente 127.0.0.1
+-------------------------------------------------------
+1623938390: 
+-------------------------------------------------------
+Recibido 4 bytes del FIFO /tmp/fifo_wr
+-------------------------------------------------------
+1623938390: 
+-------------------------------------------------------
+REcibido via TCP 4 bytes del cliente 127.0.0.1
+-------------------------------------------------------
+1623938391: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 5136.
+-------------------------------------------------------
+1623938393: 
+-------------------------------------------------------
+Enviando SEÑAL (10) al proceso 5136.
+-------------------------------------------------------
+1623938393: 
+-------------------------------------------------------
+Enviando via UDP 10 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623938393: 
+-------------------------------------------------------
+Enviando via TCP 11 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623938393: 
+-------------------------------------------------------
+Enviando 11 bytes al FIFO /tmp/fifo_rd
+-------------------------------------------------------
+1623938393: 
+-------------------------------------------------------
+Recibido via UDP 8 bytes del cliente 127.0.0.1
+-------------------------------------------------------
+1623938393: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <8> es <31>.
+********************************************[0m
+1623938393: 
+-------------------------------------------------------
+Enviando via UDP 6 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623938393: 
+-------------------------------------------------------
+Recibido 9 bytes del FIFO /tmp/fifo_wr
+-------------------------------------------------------
+1623938393: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <2> es <141>.
+********************************************[0m
+1623938393: 
+-------------------------------------------------------
+Enviando 6 bytes al FIFO /tmp/fifo_rd
+-------------------------------------------------------
+1623938393: 
+-------------------------------------------------------
+REcibido via TCP 9 bytes del cliente 127.0.0.1
+-------------------------------------------------------
+1623938393: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <5> es <460>.
+********************************************[0m
+1623938393: 
+-------------------------------------------------------
+Enviando via TCP 6 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623938394: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 5136.
+-------------------------------------------------------
+1623938394: 
+-------------------------------------------------------
+Enviando via TCP 3 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623938394: 
+-------------------------------------------------------
+Enviando 3 bytes al FIFO /tmp/fifo_rd
+-------------------------------------------------------
+1623938394: 
+-------------------------------------------------------
+Enviando via UDP 3 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623938394: 
+-------------------------------------------------------
+Recibido via UDP 4 bytes del cliente 127.0.0.1
+-------------------------------------------------------
+1623938394: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <9> es <640>.
+********************************************[0m
+1623938394: 
+-------------------------------------------------------
+Recibido 4 bytes del FIFO /tmp/fifo_wr
+-------------------------------------------------------
+1623938394: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <3> es <990>.
+********************************************[0m
+1623938394: 
+-------------------------------------------------------
+REcibido via TCP 4 bytes del cliente 127.0.0.1
+-------------------------------------------------------
+1623938394: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <6> es <961>.
+********************************************[0m
+1623938396: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 5136.
+-------------------------------------------------------
+1623938397: 
+-------------------------------------------------------
+Enviando 3 bytes al FIFO /tmp/fifo_rd
+-------------------------------------------------------
+1623938397: 
+-------------------------------------------------------
+Enviando via UDP 3 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623938397: 
+-------------------------------------------------------
+Recibido via UDP 4 bytes del cliente 127.0.0.1
+-------------------------------------------------------
+1623938397: 
+-------------------------------------------------------
+Recibido 4 bytes del FIFO /tmp/fifo_wr
+-------------------------------------------------------
+1623938398: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 5136.
+-------------------------------------------------------
+1623938398: 
+-------------------------------------------------------
+Enviando via TCP 5 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623938398: 
+-------------------------------------------------------
+REcibido via TCP 4 bytes del cliente 127.0.0.1
+-------------------------------------------------------
+1623938398: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <14> es <929>.
+********************************************[0m
+1623938400: 
+-------------------------------------------------------
+Contador 3 de KA no coincide 0.
+-------------------------------------------------------
+1623938401: 
+-------------------------------------------------------
+Enviando via UDP 5 bytes al cliente 127.0.0.1
+-------------------------------------------------------
+1623938401: 
+-------------------------------------------------------
+Recibido via UDP 4 bytes del cliente 127.0.0.1
+-------------------------------------------------------
+1623938401: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <15> es <274>.
+********************************************[0m
+1623938401: 
+-------------------------------------------------------
+Enviando 5 bytes al FIFO /tmp/fifo_rd
+-------------------------------------------------------
+1623938401: 
+-------------------------------------------------------
+Recibido 4 bytes del FIFO /tmp/fifo_wr
+-------------------------------------------------------
+1623938401: 
+[5m********************************************
+:OK> RESPUESTA ADECUADA. El secreto <13> es <612>.
+********************************************[0m
+1623938421: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 2.
+
+*************************************************
+
+
+1623938421: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-8/.n_cliente>
+1623938422: 
+-------------------------------------------------------
+Número de procesos cliente (3) inadecuado. Debe ser (4)
+-------------------------------------------------------
+1623938422: 
+*************************************************
+:ok> CONTEXTO del ejercicio 2 preparado.
+*************************************************
+1623938422: COMMAND <who >> .trazas-8/alumno-45916038B>
+ana      :0           2021-06-17 15:06 (:0)
+1623938424: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 2.
+
+*************************************************
+
+
+1623938424: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-8/.n_cliente>
+1623938424: 
+-------------------------------------------------------
+Número de procesos cliente (3) inadecuado. Debe ser (4)
+-------------------------------------------------------
+1623938424: 
+*************************************************
+:ok> CONTEXTO del ejercicio 2 preparado.
+*************************************************
+1623938424: COMMAND <who >> .trazas-8/alumno-45916038B>
+ana      :0           2021-06-17 15:06 (:0)
+1623938439: 
+-------------------------------------------------------
+Recibida una señal (10)
+-------------------------------------------------------
+1623938439: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 5161.
+-------------------------------------------------------
+1623938441: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 5161.
+-------------------------------------------------------
+1623938442: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 2.
+
+*************************************************
+
+
+1623938442: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-8/.n_cliente>
+1623938442: 
+-------------------------------------------------------
+Número de procesos cliente (5) inadecuado. Debe ser (4)
+-------------------------------------------------------
+1623938442: 
+*************************************************
+:ok> CONTEXTO del ejercicio 2 preparado.
+*************************************************
+1623938442: COMMAND <who >> .trazas-8/alumno-45916038B>
+ana      :0           2021-06-17 15:06 (:0)
+1623938443: 
+-------------------------------------------------------
+Enviando SEÑAL (10) al proceso 5162.
+-------------------------------------------------------
+1623938444: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 5162.
+-------------------------------------------------------
+1623938444: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 2.
+
+*************************************************
+
+
+1623938444: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-8/.n_cliente>
+1623938444: 
+-------------------------------------------------------
+Enviando SEÑAL (3) al proceso 5163.
+-------------------------------------------------------
+1623938446: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 5163.
+-------------------------------------------------------
+1623938448: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 5163.
+-------------------------------------------------------
+1623938448: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-8/.n_cliente>
+1623938448: 
+-------------------------------------------------------
+Enviando SEÑAL (10) al proceso 5163.
+-------------------------------------------------------
+1623938448: 
+-------------------------------------------------------
+Número de procesos cliente (3) inadecuado. Debe ser (0)
+-------------------------------------------------------
+1623938448: 
+*************************************************
+:ok> CONTEXTO del ejercicio 2 preparado.
+*************************************************
+1623938448: COMMAND <who >> .trazas-8/alumno-45916038B>
+ana      :0           2021-06-17 15:06 (:0)
+1623938448: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 5184.
+-------------------------------------------------------
+1623938450: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 5184.
+-------------------------------------------------------
+1623938452: 
+-------------------------------------------------------
+Enviando SEÑAL (12) al proceso 5184.
+-------------------------------------------------------
+1623938453: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 2.
+
+*************************************************
+
+
+1623938453: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-8/.n_cliente>
+1623938453: 
+-------------------------------------------------------
+Número de procesos cliente (3) inadecuado. Debe ser (4)
+-------------------------------------------------------
+1623938453: 
+*************************************************
+:ok> CONTEXTO del ejercicio 2 preparado.
+*************************************************
+1623938453: COMMAND <who >> .trazas-8/alumno-45916038B>
+ana      :0           2021-06-17 15:06 (:0)
+1623938453: 
+-------------------------------------------------------
+Contador 3 de KA no coincide 0.
+-------------------------------------------------------
+1623938460: 
+
+
+*************************************************
+
+          EJECUTANDO EL EJERCICIO 2.
+
+*************************************************
+
+
+1623938460: COMMAND <ps -C client -o stat=,pid= | grep -v [Zz] |awk '{print $2}' > .trazas-8/.n_cliente>
+1623938460: 
+-------------------------------------------------------
+Número de procesos cliente (3) inadecuado. Debe ser (4)
+-------------------------------------------------------
+1623938460: 
+*************************************************
+:ok> CONTEXTO del ejercicio 2 preparado.
+*************************************************
+1623938460: COMMAND <who >> .trazas-8/alumno-45916038B>
+ana      :0           2021-06-17 15:06 (:0)
+1623938474: COMMAND <find . -type f -newer .signature -print | awk -v pwd="`pwd`/.trazas-8" '{ if(index($0,pwd) != 1) print }' > /tmp/.asitmp>
+1623938474: COMMAND <cp ./client.? .trazas-8>
+1623938474: COMMAND <tar zcf save_file-45916038B .trazas-8 > /dev/null>
+1623938474: COMMAND <echo "\nopen u017633.ehu.es\nuser anonymous anonymous\npassive\ncd LAB2021/examen-8\nput save_file-45916038B 45916038B-17-6-15h59\n" | 	  ftp -n 2>&1 > /dev/null>
